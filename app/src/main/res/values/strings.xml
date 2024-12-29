@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Days Alive</string>
+    <string name="mainactivity_daysalivemessage">MainActivity.daysAliveMessage</string>
 </resources>
