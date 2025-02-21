@@ -16,7 +16,7 @@
         android:id="@+id/et_month"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Month"
+        android:hint="Enter month (1-12)"
         android:inputType="number"
         android:layout_marginBottom="8dp" />
 
@@ -24,7 +24,7 @@
         android:id="@+id/et_day"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Day"
+        android:hint="Enter the day (1-31)"
         android:inputType="number"
         android:layout_marginBottom="8dp" />
 
@@ -32,7 +32,7 @@
         android:id="@+id/et_year"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Year"
+        android:hint="Enter year (1900-2025)"
         android:inputType="number"
         android:layout_marginBottom="16dp" />
 

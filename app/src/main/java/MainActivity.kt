@@ -6,6 +6,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import java.text.NumberFormat
+import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,6 +25,10 @@ class MainActivity : AppCompatActivity() {
         // Initially hide the result TextView
         resultTextView.visibility = View.GONE
 
+        fun formatWithCommas(number: Long): String {
+            return NumberFormat.getNumberInstance(Locale.US).format(number)
+        }
+
         // Set click listener on the button
         calculateButton.setOnClickListener {
             // Get user input
@@ -34,7 +40,8 @@ class MainActivity : AppCompatActivity() {
             val daysAliveMessage: String = if (day != null && month != null && year != null) {
                 try {
                     // Calculate days alive using DaysCalculator
-                    val daysAlive: Long = DaysCalculator.birthdayCalc(day, month, year)
+                    val daysAliveRaw: Long = DaysCalculator.birthdayCalc(day, month, year)
+                    val daysAlive = formatWithCommas(daysAliveRaw)
                     "You have been alive for $daysAlive days."
                 } catch (e: Exception) {
                     "Error: Invalid Date Entry"
