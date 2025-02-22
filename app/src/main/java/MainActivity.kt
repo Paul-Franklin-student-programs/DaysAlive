@@ -40,9 +40,10 @@ class MainActivity : AppCompatActivity() {
             val daysAliveMessage: String = if (day != null && month != null && year != null) {
                 try {
                     // Calculate days alive using DaysCalculator
-                    val daysAliveRaw: Long = DaysCalculator.birthdayCalc(day, month, year)
+                    val daysAliveRaw: Long = Calculations.birthdayCalc(day, month, year)
+                    val daysAliveMessage = Calculations.getLifeStageMessage(daysAliveRaw)
                     val daysAlive = formatWithCommas(daysAliveRaw)
-                    "You have been alive for $daysAlive days."
+                    "You have been alive for $daysAlive days.\n$daysAliveMessage"
                 } catch (e: Exception) {
                     "Error: Invalid Date Entry"
                 }
