@@ -1,9 +1,11 @@
 package com.example.daysalive
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import java.text.NumberFormat
@@ -16,6 +18,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Access UI elements
+        val titleImage = findViewById<ImageView>(R.id.myTitle)
+        val logoImage = findViewById<ImageView>(R.id.myLogo)
+        val promptTextView = findViewById<TextView>(R.id.et_prompt)
         val monthField = findViewById<EditText>(R.id.et_month)
         val dayField = findViewById<EditText>(R.id.et_day)
         val yearField = findViewById<EditText>(R.id.et_year)
@@ -43,7 +48,7 @@ class MainActivity : AppCompatActivity() {
                     val daysAliveRaw: Long = Calculations.birthdayCalc(day, month, year)
                     val daysAliveMessage = Calculations.getLifeStageMessage(daysAliveRaw)
                     val daysAlive = formatWithCommas(daysAliveRaw)
-                    "You have been alive for $daysAlive days.\n$daysAliveMessage"
+                    "You have been alive for $daysAlive days.\n\n$daysAliveMessage"
                 } catch (e: Exception) {
                     "Error: Invalid Date Entry"
                 }

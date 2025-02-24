@@ -5,12 +5,50 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+    <!-- Horizontal LinearLayout for Side-by-Side Images -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">  <!-- Space between images and next element -->
+
+        <ImageView
+            android:id="@+id/myLogo"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/days_alive_logo"
+            android:contentDescription="Days Alive Logo"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"/>
+
+        <ImageView
+            android:id="@+id/myTitle"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/days_alive_title"
+            android:contentDescription="Days Alive Title"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_marginStart="10dp"/>  <!-- Space between the two images -->
+
+    </LinearLayout>
+
+
+
     <TextView
+        android:id="@+id/et_prompt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Enter your birth date:"
         android:textSize="18sp"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/dark_purple"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="10dp"
+        android:background="@color/light_purple" />
+
 
     <EditText
         android:id="@+id/et_month"
