@@ -1,0 +1,10 @@
+
+    <resources>
+        <style name="Theme.DaysAlive" parent="Theme.MaterialComponents.Light.NoActionBar">
+            <item name="colorPrimary">@color/purple_700</item> <!-- Toolbar & Buttons -->
+            <item name="colorPrimaryVariant">@color/purple_700</item>
+            <item name="android:statusBarColor">@color/purple_700</item>
+            <item name="colorSurface">@color/purple_700</item> <!-- Fixes unwanted blue -->
+            <item name="colorSurfaceVariant">@color/purple_700</item> <!-- Fixes subtle tints -->
+        </style>
+    </resources>

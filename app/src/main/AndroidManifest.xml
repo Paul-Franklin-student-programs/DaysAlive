@@ -2,11 +2,8 @@
     package="com.example.daysalive">
 
     <application
-        android:allowBackup="true"
-        android:label="How Many Days Have You Been Alive?"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
         android:theme="@style/Theme.DaysAlive">
+
 
         <activity
             android:name=".MainActivity"

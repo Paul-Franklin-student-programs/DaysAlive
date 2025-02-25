@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
 import java.text.NumberFormat
 import java.util.Locale
@@ -16,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 
         // Access UI elements
         val tryAgainButton = findViewById<TextView>(R.id.btn_try_again)
@@ -27,6 +29,10 @@ class MainActivity : AppCompatActivity() {
         val yearField = findViewById<EditText>(R.id.et_year)
         val calculateButton = findViewById<Button>(R.id.btn_calculate)
         val resultTextView = findViewById<TextView>(R.id.tv_result)
+
+
+
+
 
         // Initially hide the result TextView
         resultTextView.visibility = View.GONE
@@ -57,7 +63,13 @@ class MainActivity : AppCompatActivity() {
                 "Error: Please fill in all fields with valid numbers."
             }
 
-            // Update the TextView with the message
+            promptTextView.visibility = View.GONE
+            monthField.visibility = View.GONE
+            yearField.visibility = View.GONE
+            dayField.visibility = View.GONE
+            calculateButton.visibility = View.GONE
+
+            tryAgainButton.visibility = View.VISIBLE
             resultTextView.text = daysAliveMessage
             resultTextView.visibility = View.VISIBLE
         }
