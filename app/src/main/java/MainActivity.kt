@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Access UI elements
+        val tryAgainButton = findViewById<TextView>(R.id.btn_try_again)
         val titleImage = findViewById<ImageView>(R.id.myTitle)
         val logoImage = findViewById<ImageView>(R.id.myLogo)
         val promptTextView = findViewById<TextView>(R.id.et_prompt)

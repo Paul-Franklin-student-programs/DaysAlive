@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
+        android:layout_gravity="center"
         android:layout_marginBottom="16dp">  <!-- Space between images and next element -->
 
         <ImageView
@@ -29,6 +30,7 @@
             android:src="@drawable/days_alive_title"
             android:contentDescription="Days Alive Title"
             android:scaleType="fitCenter"
+            android:layout_gravity="bottom"
             android:adjustViewBounds="true"
             android:layout_marginStart="10dp"/>  <!-- Space between the two images -->
 
@@ -46,7 +48,7 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         android:gravity="center"
-        android:padding="10dp"
+        android:padding="5dp"
         android:background="@color/light_purple" />
 
 
@@ -56,7 +58,11 @@
         android:layout_height="wrap_content"
         android:hint="Enter month (1-12)"
         android:inputType="number"
-        android:layout_marginBottom="8dp" />
+        android:layout_marginBottom="20dp"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:textColorHint="@color/black"
+        android:fontFamily="sans-serif-light"/>
 
     <EditText
         android:id="@+id/et_day"
@@ -64,7 +70,11 @@
         android:layout_height="wrap_content"
         android:hint="Enter the day (1-31)"
         android:inputType="number"
-        android:layout_marginBottom="8dp" />
+        android:layout_marginBottom="20dp"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:textColorHint="@color/black"
+        android:fontFamily="sans-serif-light"/>
 
     <EditText
         android:id="@+id/et_year"
@@ -72,14 +82,19 @@
         android:layout_height="wrap_content"
         android:hint="Enter year (1900-2025)"
         android:inputType="number"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="16dp"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:textColorHint="@color/black"
+        android:fontFamily="sans-serif-light"/>
 
     <Button
         android:id="@+id/btn_calculate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="225dp"
+        android:layout_height="61dp"
         android:text="Calculate Days"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:textSize="20sp"/>
 
     <TextView
         android:id="@+id/tv_result"
@@ -90,4 +105,14 @@
         android:gravity="center"
         android:visibility="gone"
         android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btn_try_again"
+        android:layout_width="225dp"
+        android:layout_height="61dp"
+        android:text="Try Again"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:visibility="gone"/>
+
 </LinearLayout>
