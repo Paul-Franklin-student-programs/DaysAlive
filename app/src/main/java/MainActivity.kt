@@ -33,7 +33,6 @@ class MainActivity : AppCompatActivity() {
 
 
 
-
         // Initially hide the result TextView
         resultTextView.visibility = View.GONE
 
