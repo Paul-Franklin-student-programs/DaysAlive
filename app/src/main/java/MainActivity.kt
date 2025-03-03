@@ -32,42 +32,16 @@ class MainActivity : AppCompatActivity() {
         val resultTextViewYears = findViewById<TextView>(R.id.tv_result)
         val resultTextViewMessage = findViewById<TextView>(R.id.tv_result_two)
 
-        // Set click listener on the button
         calculateButton.setOnClickListener {
-            // Get user input
-            val month = monthField.text.toString().toIntOrNull()
-            val day = dayField.text.toString().toIntOrNull()
-            val year = yearField.text.toString().toIntOrNull()
 
-            var dayCountRaw: Long = 0L
-            var dayCountStyled: String = ""
-            var daysAliveMessage: String = ""
+            val month: Int = monthField.text.toString().toInt()
+            val day: Int = dayField.text.toString().toInt()
+            val year: Int = yearField.text.toString().toInt()
 
-            fun  getQuantity() {
-                if (day != null && month != null && year != null) {
-                    dayCountRaw = Calculations.birthdayCalc(day, month, year)
-                }
-            }
-
-            fun formatQuantity(quantity: Long) {
-                daysAliveMessage = NumberFormat.getNumberInstance(Locale.US).format(quantity)
-            }
-
-            fun getMessage(quantity: Long) {
-                daysAliveMessage = getLifeStageMessage(quantity)
-            }
-
-            fun mainFunction() {
-                getQuantity()
-                formatQuantity(dayCountRaw)
-                getMessage(dayCountRaw)
-            }
-
-            calculateButton.setOnClickListener {
-                // Call the function when the button is clicked
-                mainFunction()
-            }
-
+            val dayCountRaw: Long = Calculations.birthdayCalc(day, month, year)
+            val dayCountStyled: String = NumberFormat.getNumberInstance(Locale.US).format(dayCountRaw)
+            val dayCountStyledFinal: String = "You have been alive for $dayCountStyled days!"
+            val daysAliveMessage: String = getLifeStageMessage(dayCountRaw)
 
             promptTextView.visibility = View.GONE
             monthField.visibility = View.GONE
@@ -77,10 +51,12 @@ class MainActivity : AppCompatActivity() {
             resultTextViewYears.visibility = View.GONE
 
             tryAgainButton.visibility = View.VISIBLE
-            resultTextViewYears.text = dayCountStyled
+            resultTextViewYears.text = dayCountStyledFinal
             resultTextViewYears.visibility = View.VISIBLE
             resultTextViewMessage.text = daysAliveMessage
             resultTextViewMessage.visibility = View.VISIBLE
         }
     }
 }
+
+
