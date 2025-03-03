@@ -58,7 +58,7 @@
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
         android:gravity="center"
-        android:background="@color/light_purple" />
+        android:background="@color/lightPink" />
 
     <View
         android:layout_width="match_parent"
@@ -107,11 +107,11 @@
 
     <Button
         android:id="@+id/btn_calculate"
-        android:layout_width="225dp"
-        android:layout_height="61dp"
+        android:layout_width="178dp"
+        android:layout_height="49dp"
         android:text="Calculate Days"
         android:layout_gravity="center"
-        android:textSize="20sp"/>
+        android:textSize="14sp"/>
 
     <TextView
         android:id="@+id/tv_result"
@@ -120,7 +120,7 @@
         android:textSize="26sp"
         android:textStyle="bold"
         android:textColor="@color/dark_purple"
-        android:gravity="start"
+        android:gravity="center_horizontal"
         android:visibility="gone"
         android:padding="13dp"/>
         <!--android:layout_marginTop="16dp"
@@ -135,18 +135,18 @@
         android:gravity="start"
         android:textColor="@color/myTextColor"
         android:visibility="gone"
-        android:padding="13dp"/>
-        <!--android:layout_marginTop="16dp"
-        android:layout_marginBottom="19dp"-->
+        android:padding="13dp"
+        android:layout_marginTop="16dp"/>
 
 
     <Button
         android:id="@+id/btn_try_again"
-        android:layout_width="225dp"
-        android:layout_height="61dp"
+        android:layout_width="178dp"
+        android:layout_height="49dp"
         android:text="Try Again"
         android:layout_gravity="center"
-        android:textSize="20sp"
-        android:visibility="gone"/>
+        android:textSize="14sp"
+        android:visibility="gone"
+        android:layout_marginTop="8dp"/>
 
 </LinearLayout>
