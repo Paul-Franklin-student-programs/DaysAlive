@@ -1,5 +1,6 @@
 package com.example.daysalive
 
+import Calculations.Companion.getLifeStageMessage
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
@@ -21,24 +22,15 @@ class MainActivity : AppCompatActivity() {
 
         // Access UI elements
         val tryAgainButton = findViewById<TextView>(R.id.btn_try_again)
-        val titleImage = findViewById<ImageView>(R.id.myTitle)
-        val logoImage = findViewById<ImageView>(R.id.myLogo)
+        /*val titleImage = findViewById<ImageView>(R.id.myTitle)
+        val logoImage = findViewById<ImageView>(R.id.myLogo)*/
         val promptTextView = findViewById<TextView>(R.id.et_prompt)
         val monthField = findViewById<EditText>(R.id.et_month)
         val dayField = findViewById<EditText>(R.id.et_day)
         val yearField = findViewById<EditText>(R.id.et_year)
         val calculateButton = findViewById<Button>(R.id.btn_calculate)
-        val resultTextView = findViewById<TextView>(R.id.tv_result)
-
-
-
-
-        // Initially hide the result TextView
-        resultTextView.visibility = View.GONE
-
-        fun formatWithCommas(number: Long): String {
-            return NumberFormat.getNumberInstance(Locale.US).format(number)
-        }
+        val resultTextViewYears = findViewById<TextView>(R.id.tv_result)
+        val resultTextViewMessage = findViewById<TextView>(R.id.tv_result_two)
 
         // Set click listener on the button
         calculateButton.setOnClickListener {
@@ -47,30 +39,48 @@ class MainActivity : AppCompatActivity() {
             val day = dayField.text.toString().toIntOrNull()
             val year = yearField.text.toString().toIntOrNull()
 
-            // Determine the message to display
-            val daysAliveMessage: String = if (day != null && month != null && year != null) {
-                try {
-                    // Calculate days alive using DaysCalculator
-                    val daysAliveRaw: Long = Calculations.birthdayCalc(day, month, year)
-                    val daysAliveMessage = Calculations.getLifeStageMessage(daysAliveRaw)
-                    val daysAlive = formatWithCommas(daysAliveRaw)
-                    "You have been alive for $daysAlive days.\n\n$daysAliveMessage"
-                } catch (e: Exception) {
-                    "Error: Invalid Date Entry"
+            var dayCountRaw: Long = 0L
+            var dayCountStyled: String = ""
+            var daysAliveMessage: String = ""
+
+            fun  getQuantity() {
+                if (day != null && month != null && year != null) {
+                    dayCountRaw = Calculations.birthdayCalc(day, month, year)
                 }
-            } else {
-                "Error: Please fill in all fields with valid numbers."
             }
+
+            fun formatQuantity(quantity: Long) {
+                daysAliveMessage = NumberFormat.getNumberInstance(Locale.US).format(quantity)
+            }
+
+            fun getMessage(quantity: Long) {
+                daysAliveMessage = getLifeStageMessage(quantity)
+            }
+
+            fun mainFunction() {
+                getQuantity()
+                formatQuantity(dayCountRaw)
+                getMessage(dayCountRaw)
+            }
+
+            calculateButton.setOnClickListener {
+                // Call the function when the button is clicked
+                mainFunction()
+            }
+
 
             promptTextView.visibility = View.GONE
             monthField.visibility = View.GONE
             yearField.visibility = View.GONE
             dayField.visibility = View.GONE
             calculateButton.visibility = View.GONE
+            resultTextViewYears.visibility = View.GONE
 
             tryAgainButton.visibility = View.VISIBLE
-            resultTextView.text = daysAliveMessage
-            resultTextView.visibility = View.VISIBLE
+            resultTextViewYears.text = dayCountStyled
+            resultTextViewYears.visibility = View.VISIBLE
+            resultTextViewMessage.text = daysAliveMessage
+            resultTextViewMessage.visibility = View.VISIBLE
         }
     }
 }

@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="light_purple">#E6CCFF</color>
     <color name="dark_purple">#800080</color>
+    <color name="myTextColor">#000000</color>
 
 
 </resources>
