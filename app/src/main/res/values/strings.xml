@@ -1,4 +1,22 @@
 <resources>
     <string name="app_name">Days Alive</string>
     <string name="mainactivity_daysalivemessage">MainActivity.daysAliveMessage</string>
+    <string name="running_child">running_child</string>
+    <string name="try_again">Try Again</string>
+    <string name="calculate_days">Calculate Days</string>
+    <string name="enter_year_1900_2025">Enter year (1900 - 2025)</string>
+    <string name="enter_the_day_1_31">Enter the day (1 - 31)</string>
+    <string name="enter_month_1_12">Enter month (1 - 12)</string>
+    <string name="enter_your_birth_date">Enter your birth date:</string>
+    <string name="days_alive_title">Days Alive Title</string>
+    <string name="days_alive_logo">Days Alive Logo</string>
+    <string name="person_on_roller_coaster">person_on_roller_coaster</string>
+    <string name="old_person_with_family">old_person_with_family</string>
+    <string name="man_going_for_jog">man_going_for_jog</string>
+    <string name="person_reading_book">person_reading_book</string>
+    <string name="man_meditating">man_meditating</string>
+    <string name="corporate_person">corporate_person</string>
+    <string name="man_standing_tall">man_standing_tall</string>
+    <string name="man_rock_climbing">man_rock_climbing</string>
+    <string name="teen_riding_bike">teen_riding_bike</string>
 </resources>

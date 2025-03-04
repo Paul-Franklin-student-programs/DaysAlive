@@ -21,7 +21,7 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:src="@drawable/days_alive_logo"
-            android:contentDescription="Days Alive Logo"
+            android:contentDescription="@string/days_alive_logo"
             android:scaleType="fitCenter"
             android:layout_gravity="bottom"
             android:adjustViewBounds="true"/>
@@ -31,7 +31,7 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:src="@drawable/days_alive_title"
-            android:contentDescription="Days Alive Title"
+            android:contentDescription="@string/days_alive_title"
             android:scaleType="fitCenter"
             android:layout_gravity="bottom"
             android:adjustViewBounds="true"
@@ -41,7 +41,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="1.5dp"
         android:background="@color/black"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="0dp"/>
@@ -50,19 +50,19 @@
         android:id="@+id/et_prompt"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:text="Enter your birth date:"
+        android:text="@string/enter_your_birth_date"
         android:textSize="22sp"
         android:layout_marginBottom="0dp"
         android:textColor="@color/black"
-        android:textStyle="bold"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:gravity="center"
+        android:paddingStart="9dp"
+        android:gravity="center_vertical"
         android:background="@color/lightPink" />
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="1.5dp"
         android:background="@color/black"
         android:layout_marginBottom="20dp" />
 
@@ -70,7 +70,7 @@
         android:id="@+id/et_month"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter month (1-12)"
+        android:hint="@string/enter_month_1_12"
         android:inputType="number"
         android:layout_marginBottom="20dp"
         android:padding="10dp"
@@ -83,7 +83,7 @@
         android:id="@+id/et_day"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter the day (1-31)"
+        android:hint="@string/enter_the_day_1_31"
         android:inputType="number"
         android:layout_marginBottom="20dp"
         android:padding="10dp"
@@ -96,7 +96,7 @@
         android:id="@+id/et_year"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter year (1900-2025)"
+        android:hint="@string/enter_year_1900_2025"
         android:inputType="number"
         android:layout_marginBottom="16dp"
         android:padding="10dp"
@@ -109,7 +109,7 @@
         android:id="@+id/btn_calculate"
         android:layout_width="178dp"
         android:layout_height="49dp"
-        android:text="Calculate Days"
+        android:text="@string/calculate_days"
         android:layout_gravity="center"
         android:textSize="14sp"/>
 
@@ -143,10 +143,136 @@
         android:id="@+id/btn_try_again"
         android:layout_width="178dp"
         android:layout_height="49dp"
-        android:text="Try Again"
+        android:text="@string/try_again"
         android:layout_gravity="center"
         android:textSize="14sp"
         android:visibility="gone"
-        android:layout_marginTop="8dp"/>
+        android:layout_marginTop="6dp"/>
+
+        <ImageView
+        android:id="@+id/age_0_9"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/age_0_9"
+        android:contentDescription="@string/running_child"
+        android:scaleType="fitCenter"
+        android:layout_gravity="bottom"
+        android:adjustViewBounds="true"/>
+
+        <ImageView
+        android:id="@+id/age_10_19"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/age_10_19"
+        android:contentDescription="@string/teen_riding_bike"
+        android:scaleType="fitCenter"
+        android:layout_gravity="bottom"
+        android:adjustViewBounds="true"/>
+
+        <ImageView
+        android:id="@+id/age_20_29"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/age_20_29"
+        android:contentDescription="@string/man_rock_climbing"
+        android:scaleType="fitCenter"
+        android:layout_gravity="bottom"
+        android:adjustViewBounds="true"/>
+
+        <ImageView
+        android:id="@+id/age_30_39"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/age_30_39"
+        android:contentDescription="@string/man_standing_tall"
+        android:scaleType="fitCenter"
+        android:layout_gravity="bottom"
+        android:adjustViewBounds="true"/>
+
+        <ImageView
+        android:id="@+id/age_40_49"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/age_40_49"
+        android:contentDescription="@string/corporate_person"
+        android:scaleType="fitCenter"
+        android:layout_gravity="bottom"
+        android:adjustViewBounds="true"/>
+
+        <ImageView
+        android:id="@+id/age_50_59"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/age_50_59"
+        android:contentDescription="@string/man_meditating"
+        android:scaleType="fitCenter"
+        android:layout_gravity="bottom"
+        android:adjustViewBounds="true"/>
+
+        <ImageView
+        android:id="@+id/age_60_69"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/age_60_69"
+        android:contentDescription="@string/person_reading_book"
+        android:scaleType="fitCenter"
+        android:layout_gravity="bottom"
+        android:adjustViewBounds="true"/>
+
+        <ImageView
+        android:id="@+id/age_70_79"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/age_70_79"
+        android:contentDescription="@string/man_going_for_jog"
+        android:scaleType="fitCenter"
+        android:layout_gravity="bottom"
+        android:adjustViewBounds="true"/>
+
+        <ImageView
+        android:id="@+id/age_80_89"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/age_80_89"
+        android:contentDescription="@string/running_child"
+        android:scaleType="fitCenter"
+        android:layout_gravity="bottom"
+        android:adjustViewBounds="true"/>
+
+        <ImageView
+        android:id="@+id/age_90_99"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/age_90_99"
+        android:contentDescription="@string/old_person_with_family"
+        android:scaleType="fitCenter"
+        android:layout_gravity="bottom"
+        android:adjustViewBounds="true"/>
+
+        <ImageView
+        android:id="@+id/age_100"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/age_100"
+        android:contentDescription="@string/person_on_roller_coaster"
+        android:scaleType="fitCenter"
+        android:layout_gravity="bottom"
+        android:adjustViewBounds="true"/>
+
+
+
+
+        -->
 
 </LinearLayout>
