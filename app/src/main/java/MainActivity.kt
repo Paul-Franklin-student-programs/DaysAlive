@@ -78,13 +78,13 @@ class MainActivity : AppCompatActivity() {
             calculateButton.visibility = View.GONE
             resultTextViewYears.visibility = View.GONE
 
-            tryAgainButton.visibility = View.VISIBLE
             resultTextViewYears.text = dayCountStyledFinal
             resultTextViewYears.visibility = View.VISIBLE
             resultTextViewMessage.text = daysAliveMessage
             resultTextViewMessage.visibility = View.VISIBLE
 
             determineImage(dayCountRaw)
+            tryAgainButton.visibility = View.VISIBLE
         }
 
         tryAgainButton.setOnClickListener {

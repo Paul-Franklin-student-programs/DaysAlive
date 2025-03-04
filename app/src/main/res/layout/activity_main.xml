@@ -122,7 +122,7 @@
         android:textColor="@color/dark_purple"
         android:gravity="center_horizontal"
         android:visibility="gone"
-        android:padding="13dp"/>
+        android:padding="9dp"/>
         <!--android:layout_marginTop="16dp"
         android:layout_marginBottom="19dp"-->
 
@@ -136,18 +136,8 @@
         android:textColor="@color/myTextColor"
         android:visibility="gone"
         android:padding="13dp"
-        android:layout_marginTop="16dp"/>
-
-
-    <Button
-        android:id="@+id/btn_try_again"
-        android:layout_width="178dp"
-        android:layout_height="49dp"
-        android:text="@string/try_again"
-        android:layout_gravity="center"
-        android:textSize="14sp"
-        android:visibility="gone"
-        android:layout_marginTop="6dp"/>
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="10dp"/>
 
         <ImageView
         android:id="@+id/age_0_9"
@@ -263,12 +253,21 @@
         android:id="@+id/age_100"
         android:visibility="gone"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
         android:src="@drawable/age_100"
-        android:contentDescription="@string/person_on_roller_coaster"
-        android:scaleType="fitCenter"
-        android:layout_gravity="bottom"
-        android:adjustViewBounds="true"/>
+        android:contentDescription="@string/person_on_roller_coaster" />
+
+        <Button
+        android:id="@+id/btn_try_again"
+        android:layout_width="178dp"
+        android:layout_height="49dp"
+        android:text="@string/try_again"
+        android:textSize="14sp"
+        android:visibility="gone"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="14dp"
+        android:layout_gravity="center_horizontal" />
 
 
 </LinearLayout>
