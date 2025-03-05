@@ -89,6 +89,11 @@ class MainActivity : AppCompatActivity() {
 
         tryAgainButton.setOnClickListener {
 
+            monthField.text.clear()
+            yearField.text.clear()
+            dayField.text.clear()
+
+
             promptTextView.visibility = View.VISIBLE
             monthField.visibility = View.VISIBLE
             yearField.visibility = View.VISIBLE
@@ -99,6 +104,17 @@ class MainActivity : AppCompatActivity() {
             tryAgainButton.visibility = View.GONE
             resultTextViewYears.visibility = View.GONE
             resultTextViewMessage.visibility = View.GONE
+            age_0_9.visibility = View.GONE
+            age_10_19.visibility = View.GONE
+            age_20_29.visibility = View.GONE
+            age_30_39.visibility = View.GONE
+            age_40_49.visibility = View.GONE
+            age_50_59.visibility = View.GONE
+            age_60_69.visibility = View.GONE
+            age_70_79.visibility = View.GONE
+            age_80_89.visibility = View.GONE
+            age_90_99.visibility = View.GONE
+            age_100.visibility = View.GONE
         }
 
 
