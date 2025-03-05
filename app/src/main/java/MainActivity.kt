@@ -95,7 +95,6 @@ class MainActivity : AppCompatActivity() {
                     errorTextViewMessage.visibility = View.VISIBLE
                     return@setOnClickListener
                 }
-
                 // If result is a valid day count, continue
                 playSound(R.raw.daysalive_sound_correct)
                 val dayCountRaw = result as Long
