@@ -1,17 +1,43 @@
 import java.time.LocalDate
 import java.time.temporal.ChronoUnit
+import java.time.format.DateTimeParseException
 
 class Calculations {
     companion object {
         // Method to calculate days alive
-        fun birthdayCalc(day: Int, month: Int, year: Int): Long {
-            // Create a LocalDate object for the user's birthday
-            val userBorn = LocalDate.of(year, month, day)
-            // Get the current date
-            val todayDate = LocalDate.now()
-            // Calculate and return the difference in days
-            return ChronoUnit.DAYS.between(userBorn, todayDate)
+        fun birthdayCalc(day: String?, month: String?, year: String?): Any {
+            // Step 1: Check for missing input
+            if (day.isNullOrBlank() || month.isNullOrBlank() || year.isNullOrBlank()) {
+                return "Please enter entire birthday"
+            }
+
+            try {
+                // Step 2: Convert inputs to integers
+                val dayInt = day.toInt()
+                val monthInt = month.toInt()
+                val yearInt = year.toInt()
+
+                // Step 3: Validate ranges
+                if (monthInt !in 1..12 || yearInt !in 1900..2025 || dayInt !in 1..31) {
+                    return "Please enter valid birthday information"
+                }
+
+                // Step 4: Check if the date actually exists
+                return try {
+                    val userBorn = LocalDate.of(yearInt, monthInt, dayInt)
+                    val todayDate = LocalDate.now()
+
+                    // Step 5: Calculate and return difference in days
+                    ChronoUnit.DAYS.between(userBorn, todayDate)
+                } catch (e: DateTimeParseException) {
+                    "The date you entered does not exist!"
+                }
+            } catch (e: NumberFormatException) {
+                return "Please enter valid birthday information"
+            }
         }
+
+
         fun getLifeStageMessage(daysAlive: Long): String {
             return when (daysAlive) {
                 in 0..3652 -> "You're exploring and learning. Have fun, and follow your heart!" // 0 - 9 years
