@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import java.text.NumberFormat
 import java.time.DateTimeException
 import java.util.Locale
+import android.media.MediaPlayer
 
 class MainActivity : AppCompatActivity() {
 
@@ -43,6 +44,17 @@ class MainActivity : AppCompatActivity() {
             findViewById<ImageView>(R.id.age_90_99),
             findViewById<ImageView>(R.id.age_100)
         )
+
+        calculateButton.isSoundEffectsEnabled = false
+        tryAgainButton.isSoundEffectsEnabled = false
+
+        fun playSound(resourceId: Int) {
+            val mediaPlayer = MediaPlayer.create(this, resourceId)
+            mediaPlayer.start()
+            mediaPlayer.setOnCompletionListener { mp ->
+                mp.release() // Free memory after playback
+            }
+        }
 
         fun determineImage(daysAlive: Long) {
             // Hide all images first
@@ -78,12 +90,14 @@ class MainActivity : AppCompatActivity() {
 
                 if (result is String) {
                     // If result is an error message, display it
+                    playSound(R.raw.dayalive_sound_wrong)
                     errorTextViewMessage.text = result
                     errorTextViewMessage.visibility = View.VISIBLE
                     return@setOnClickListener
                 }
 
                 // If result is a valid day count, continue
+                playSound(R.raw.daysalive_sound_correct)
                 val dayCountRaw = result as Long
                 val dayCountStyled = NumberFormat.getNumberInstance(Locale.US).format(dayCountRaw)
                 val dayCountStyledFinal = "You have been alive for... \n\n$dayCountStyled days!"
@@ -106,9 +120,11 @@ class MainActivity : AppCompatActivity() {
 
             } catch (e: Exception) {
                 if (e is NumberFormatException || e is DateTimeException) {
+                    playSound(R.raw.dayalive_sound_wrong)
                     // If error is related to parsing or date validation, show the correct message
                     errorTextViewMessage.text = "Error: The date you entered does not exist!"
                 } else {
+                    playSound(R.raw.dayalive_sound_wrong)
                     // For truly unexpected errors, show general error message
                     errorTextViewMessage.text = "An unexpected error occurred.\nPlease try again."
                 }
@@ -116,6 +132,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             tryAgainButton.setOnClickListener {
+                playSound(R.raw.daysalive_sound_return)
                 // Reset input fields
                 monthField.text.clear()
                 yearField.text.clear()
