@@ -9,6 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import java.text.NumberFormat
+import java.time.DateTimeException
 import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
@@ -77,8 +78,8 @@ class MainActivity : AppCompatActivity() {
 
                 if (result is String) {
                     // If result is an error message, display it
-                    resultTextViewYears.text = result
-                    resultTextViewYears.visibility = View.VISIBLE
+                    errorTextViewMessage.text = result
+                    errorTextViewMessage.visibility = View.VISIBLE
                     return@setOnClickListener
                 }
 
@@ -104,30 +105,36 @@ class MainActivity : AppCompatActivity() {
                 tryAgainButton.visibility = View.VISIBLE
 
             } catch (e: Exception) {
-                errorTextViewMessage.text = "An unexpected error occurred. Please try again."
+                if (e is NumberFormatException || e is DateTimeException) {
+                    // If error is related to parsing or date validation, show the correct message
+                    errorTextViewMessage.text = "Error: The date you entered does not exist!"
+                } else {
+                    // For truly unexpected errors, show general error message
+                    errorTextViewMessage.text = "An unexpected error occurred.\nPlease try again."
+                }
                 errorTextViewMessage.visibility = View.VISIBLE
             }
-        }
 
-        tryAgainButton.setOnClickListener {
-            // Reset input fields
-            monthField.text.clear()
-            yearField.text.clear()
-            dayField.text.clear()
+            tryAgainButton.setOnClickListener {
+                // Reset input fields
+                monthField.text.clear()
+                yearField.text.clear()
+                dayField.text.clear()
 
-            // Restore visibility
-            promptTextView.visibility = View.VISIBLE
-            monthField.visibility = View.VISIBLE
-            yearField.visibility = View.VISIBLE
-            dayField.visibility = View.VISIBLE
-            calculateButton.visibility = View.VISIBLE
+                // Restore visibility
+                promptTextView.visibility = View.VISIBLE
+                monthField.visibility = View.VISIBLE
+                yearField.visibility = View.VISIBLE
+                dayField.visibility = View.VISIBLE
+                calculateButton.visibility = View.VISIBLE
 
-            tryAgainButton.visibility = View.GONE
-            resultTextViewYears.visibility = View.GONE
-            resultTextViewMessage.visibility = View.GONE
+                tryAgainButton.visibility = View.GONE
+                resultTextViewYears.visibility = View.GONE
+                resultTextViewMessage.visibility = View.GONE
 
-            // Hide all age images
-            ageImages.forEach { it.visibility = View.GONE }
+                // Hide all age images
+                ageImages.forEach { it.visibility = View.GONE }
+            }
         }
     }
 }

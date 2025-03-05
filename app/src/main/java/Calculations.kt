@@ -8,7 +8,7 @@ class Calculations {
         fun birthdayCalc(day: String?, month: String?, year: String?): Any {
             // Step 1: Check for missing input
             if (day.isNullOrBlank() || month.isNullOrBlank() || year.isNullOrBlank()) {
-                return "Please enter entire birthday"
+                return "Error: Do not leave fields blank"
             }
 
             try {
@@ -19,7 +19,7 @@ class Calculations {
 
                 // Step 3: Validate ranges
                 if (monthInt !in 1..12 || yearInt !in 1900..2025 || dayInt !in 1..31) {
-                    return "Please enter valid birthday information"
+                    return "Error: Please enter valid birthday information"
                 }
 
                 // Step 4: Check if the date actually exists
@@ -30,10 +30,10 @@ class Calculations {
                     // Step 5: Calculate and return difference in days
                     ChronoUnit.DAYS.between(userBorn, todayDate)
                 } catch (e: DateTimeParseException) {
-                    "The date you entered does not exist!"
+                    "Error: The date you entered does not exist!"
                 }
             } catch (e: NumberFormatException) {
-                return "Please enter valid birthday information"
+                return "Error: Please enter valid birthday information"
             }
         }
 
