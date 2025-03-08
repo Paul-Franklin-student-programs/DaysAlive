@@ -99,7 +99,7 @@ class MainActivity : AppCompatActivity() {
                 playSound(R.raw.daysalive_sound_correct)
                 val dayCountRaw = result as Long
                 val dayCountStyled = NumberFormat.getNumberInstance(Locale.US).format(dayCountRaw)
-                val dayCountStyledFinal = "You have been alive for... \n\n$dayCountStyled days!"
+                val dayCountStyledFinal = "You have been alive for... \n$dayCountStyled days!"
                 val daysAliveMessage = getLifeStageMessage(dayCountRaw)
 
                 // Hide input fields and show results

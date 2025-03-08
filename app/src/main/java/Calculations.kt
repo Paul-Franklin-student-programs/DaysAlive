@@ -43,7 +43,7 @@ class Calculations {
                 in 0..3652 -> "You're exploring and learning. Have fun, and follow your heart!" // 0 - 9 years
                 in 3653..7304 -> "You're learning responsibility and finding out who you are. Be bold and free!" // 10 - 19 years
                 in 7305..10957 -> "Enjoy your new freedoms and make plans for the future!" // 20 - 29 years
-                in 10958..14609 -> "Friends, family, romance, independence, prosperity, and everything in between!" // 30 - 39 years
+                in 10958..14609 -> "Friends, family, romance, independence, and everything in between!" // 30 - 39 years
                 in 14610..18262 -> "You inspire others with your success as you achieve your dreams!" // 40 - 49 years
                 in 18263..21914 -> "Your wisdom drives your accomplishments, and your compassion fuels your relationships." // 50 - 59 years
                 in 21915..25567 -> "Reflecting on a life well lived, with excitement for what's to come!" // 60 - 69 years
