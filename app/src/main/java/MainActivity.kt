@@ -26,6 +26,26 @@ class MainActivity : AppCompatActivity() {
 
         val myLogo = findViewById<ImageView>(R.id.myLogo)
         // Create a Matrix object for zooming
+        val matrix2 = Matrix()
+
+        // Scale the image (increase the zoom by setting values greater than 1)
+        val scaleXX = .25f // Increase horizontal scale (adjust as needed)
+        val scaleYY = .25f // Increase vertical scale (adjust as needed)
+
+        matrix2.setScale(scaleXX, scaleYY)
+
+        // Translate the image to reposition it after zooming
+        val translateXX = -29f // Move image left (adjust as needed)
+        val translateYY = -28f // Move image up (adjust as needed)
+        matrix2.postTranslate(translateXX, translateYY)
+
+        // Apply the transformation to the ImageView
+        myLogo.imageMatrix = matrix2
+
+
+
+        val myTitle = findViewById<ImageView>(R.id.myTitle)
+        // Create a Matrix object for zooming
         val matrix = Matrix()
 
         // Scale the image (increase the zoom by setting values greater than 1)
@@ -35,12 +55,13 @@ class MainActivity : AppCompatActivity() {
         matrix.setScale(scaleX, scaleY)
 
         // Translate the image to reposition it after zooming
-        val translateX = -29f // Move image left (adjust as needed)
+        val translateX = -39f // Move image left (adjust as needed)
         val translateY = -28f // Move image up (adjust as needed)
         matrix.postTranslate(translateX, translateY)
 
         // Apply the transformation to the ImageView
-        myLogo.imageMatrix = matrix
+        myTitle.imageMatrix = matrix
+
 
         // Access UI elements
         val tryAgainButton = findViewById<TextView>(R.id.btn_try_again)
