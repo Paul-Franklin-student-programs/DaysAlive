@@ -1,6 +1,8 @@
 
     <resources>
-        <style name="Theme.DaysAlive" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <style name="Theme2.YourApp" parent="Theme.MaterialComponents.Light.NoActionBar">
+            <!-- Your other theme attributes -->
+
             <item name="colorPrimary">@color/purple_700</item> <!-- Toolbar & Buttons -->
             <item name="colorPrimaryVariant">@color/purple_700</item>
             <item name="android:statusBarColor">@color/purple_700</item>
@@ -11,10 +13,5 @@
             <item name="colorOnSurface">@color/purple_700</item>  <!-- Ensures contrast on surfaces -->
         </style>
 
-        <style name="ToolbarTitleStyle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
-            <item name="android:textColor">@android:color/white</item>
-            <item name="android:textSize">23sp</item>
-            <item name="android:fontFamily">fantasy</item>
-        </style>
 
     </resources>

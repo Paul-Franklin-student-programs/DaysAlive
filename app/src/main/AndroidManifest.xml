@@ -2,7 +2,7 @@
     package="com.example.daysalive">
 
     <application
-        android:theme="@style/Theme.DaysAlive">
+        android:theme="@style/Theme.YourApp">
 
 
         <activity
