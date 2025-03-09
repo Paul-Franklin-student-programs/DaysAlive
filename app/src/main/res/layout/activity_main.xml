@@ -309,132 +309,131 @@
 
     <ImageView
         android:id="@+id/planet_jupiter"
+        android:src="@drawable/planet_jupiter"
         android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:src="@drawable/planet_jupiter"
-        android:contentDescription="@string/old_person_with_family"
         android:scaleType="fitCenter"
         android:layout_gravity="bottom"
         android:adjustViewBounds="true"/>
+
 
     <ImageView
         android:id="@+id/planet_mars"
+        android:src="@drawable/planet_mars"
         android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:src="@drawable/planet_mars"
-        android:contentDescription="@string/old_person_with_family"
         android:scaleType="fitCenter"
         android:layout_gravity="bottom"
         android:adjustViewBounds="true"/>
+
 
     <ImageView
         android:id="@+id/planet_mercury"
+        android:src="@drawable/planet_mercury"
         android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:src="@drawable/planet_mercury"
-        android:contentDescription="@string/old_person_with_family"
         android:scaleType="fitCenter"
         android:layout_gravity="bottom"
         android:adjustViewBounds="true"/>
+
 
     <ImageView
         android:id="@+id/planet_neptune"
+        android:src="@drawable/planet_neptune"
         android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:src="@drawable/planet_neptune"
-        android:contentDescription="@string/old_person_with_family"
         android:scaleType="fitCenter"
         android:layout_gravity="bottom"
         android:adjustViewBounds="true"/>
+
 
     <ImageView
         android:id="@+id/planet_pluto"
+        android:src="@drawable/planet_pluto"
         android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:src="@drawable/planet_pluto"
-        android:contentDescription="@string/old_person_with_family"
         android:scaleType="fitCenter"
         android:layout_gravity="bottom"
         android:adjustViewBounds="true"/>
+
 
     <ImageView
         android:id="@+id/planet_saturn"
+        android:src="@drawable/planet_saturn"
         android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:src="@drawable/planet_saturn"
-        android:contentDescription="@string/old_person_with_family"
         android:scaleType="fitCenter"
         android:layout_gravity="bottom"
         android:adjustViewBounds="true"/>
+
 
     <ImageView
         android:id="@+id/planet_the_moon"
+        android:src="@drawable/planet_the_moon"
         android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:src="@drawable/planet_the_moon"
-        android:contentDescription="@string/old_person_with_family"
         android:scaleType="fitCenter"
         android:layout_gravity="bottom"
         android:adjustViewBounds="true"/>
 
+
     <ImageView
         android:id="@+id/planet_the_sun"
+        android:src="@drawable/planet_the_sun"
         android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:src="@drawable/planet_the_sun"
-        android:contentDescription="@string/old_person_with_family"
         android:scaleType="fitCenter"
         android:layout_gravity="bottom"
         android:adjustViewBounds="true"/>
 
     <ImageView
         android:id="@+id/planet_uranus"
+        android:src="@drawable/planet_uranus"
         android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:src="@drawable/planet_uranus"
-        android:contentDescription="@string/old_person_with_family"
         android:scaleType="fitCenter"
         android:layout_gravity="bottom"
         android:adjustViewBounds="true"/>
 
+
     <ImageView
         android:id="@+id/planet_venus"
+        android:src="@drawable/planet_venus"
         android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:src="@drawable/planet_venus"
-        android:contentDescription="@string/old_person_with_family"
         android:scaleType="fitCenter"
         android:layout_gravity="bottom"
         android:adjustViewBounds="true"/>
+
 
 
     <TextView
         android:id="@+id/tv_result_five"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="26sp"
+        android:textSize="15sp"
         android:textStyle="bold"
-        android:textColor="@color/dark_purple"
+        android:textColor="@color/black"
         android:gravity="center_horizontal"
         android:visibility="gone"
         android:padding="2dp"/>

@@ -17,9 +17,12 @@ import java.time.LocalDate
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var dayCountStyledFinal: String
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 
         // Access UI elements
         val tryAgainButton = findViewById<TextView>(R.id.btn_try_again)
@@ -87,6 +90,22 @@ class MainActivity : AppCompatActivity() {
         }
 
         val glassBowl = View.OnClickListener {
+
+            dayCountStyledFinal = dayCountStyledFinal.drop(28)
+            resultTextViewYears.text = dayCountStyledFinal
+
+            resultTextViewMessage.visibility = View.GONE
+            age0.visibility = View.GONE
+            age10.visibility = View.GONE
+            age20.visibility = View.GONE
+            age30.visibility = View.GONE
+            age40.visibility = View.GONE
+            age50.visibility = View.GONE
+            age60.visibility = View.GONE
+            age70.visibility = View.GONE
+            age80.visibility = View.GONE
+            age90.visibility = View.GONE
+            age100.visibility = View.GONE
             val day2 = dayField.text.toString()
             val month2 = monthField.text.toString()
             val dayInt2 = day2.toInt()
@@ -162,6 +181,9 @@ class MainActivity : AppCompatActivity() {
                 planetUranus.visibility = View.GONE
                 planetNeptune.visibility = View.GONE
 
+                firstZodiacMessage.visibility = View.GONE
+                secondZodiacMessage.visibility = View.GONE
+
 
 
 
@@ -185,12 +207,17 @@ class MainActivity : AppCompatActivity() {
                     errorTextViewMessage.visibility = View.VISIBLE
 
                 }
+
+
+
+                    val dayCountRaw = result as Long
+                    val dayCountStyled = NumberFormat.getNumberInstance(Locale.US).format(dayCountRaw)
+                    val daysAliveMessage = getLifeStageMessage(dayCountRaw)
                 // If result is a valid day count, continue
-                playSound(R.raw.daysalive_sound_correct)
-                val dayCountRaw = result as Long
-                val dayCountStyled = NumberFormat.getNumberInstance(Locale.US).format(dayCountRaw)
-                val dayCountStyledFinal = "You have been alive for... \n$dayCountStyled days!"
-                val daysAliveMessage = getLifeStageMessage(dayCountRaw)
+                dayCountStyledFinal =
+                "You have been alive for... \n$dayCountStyled days!"
+
+
 
 
                 // Hide input fields and show results
@@ -252,6 +279,9 @@ class MainActivity : AppCompatActivity() {
 
 
         tryAgainButton.setOnClickListener {
+
+            firstZodiacMessage.visibility = View.GONE
+            secondZodiacMessage.visibility = View.GONE
             playSound(R.raw.daysalive_sound_return)
             // Reset input fields
             monthField.text.clear()
@@ -268,6 +298,31 @@ class MainActivity : AppCompatActivity() {
             tryAgainButton.visibility = View.GONE
             resultTextViewYears.visibility = View.GONE
             resultTextViewMessage.visibility = View.GONE
+
+            planetMars.visibility = View.GONE
+            planetVenus.visibility = View.GONE
+            planetMercury.visibility = View.GONE
+            planetTheMoon.visibility = View.GONE
+            planetTheSun.visibility = View.GONE
+            planetMercury.visibility = View.GONE
+            planetVenus.visibility = View.GONE
+            planetPluto.visibility = View.GONE
+            planetJupiter.visibility = View.GONE
+            planetSaturn.visibility = View.GONE
+            planetUranus.visibility = View.GONE
+            planetNeptune.visibility = View.GONE
+
+            age0.visibility = View.GONE
+            age10.visibility = View.GONE
+            age20.visibility = View.GONE
+            age30.visibility = View.GONE
+            age40.visibility = View.GONE
+            age50.visibility = View.GONE
+            age60.visibility = View.GONE
+            age70.visibility = View.GONE
+            age80.visibility = View.GONE
+            age90.visibility = View.GONE
+            age100.visibility = View.GONE
 
 
         }
