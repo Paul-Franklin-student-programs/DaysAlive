@@ -39,20 +39,24 @@
 
     </LinearLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2.25dp"
+        android:background="@color/black" />
+
     <TextView
         android:id="@+id/et_prompt"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="60dp"
         android:text="@string/enter_your_birth_date"
-        android:textSize="22sp"
-        android:layout_marginBottom="0dp"
+        android:textSize="21sp"
         android:textColor="@color/black"
-        android:paddingTop="5dp"
-        android:paddingBottom="3.5dp"
         android:paddingStart="9dp"
-        android:gravity="center_vertical"
+        android:paddingBottom="2.75dp"
+        android:gravity="bottom|start"
         android:background="@color/lightGrey"
         android:fontFamily="@font/metamorphous_regular"/>
+
 
     <View
         android:layout_width="match_parent"
@@ -111,7 +115,7 @@
         android:id="@+id/tv_result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="17dp"
         android:textSize="26sp"
         android:textStyle="bold"
         android:textColor="@color/dark_purple"
@@ -138,7 +142,6 @@
         android:textColor="@color/myTextColor"
         android:visibility="gone"
         android:padding="13dp"
-        android:layout_marginTop="2dp"
         android:layout_marginBottom="10dp"/>
 
         <ImageView
@@ -270,12 +273,13 @@
         android:src="@drawable/age_100"
         android:contentDescription="@string/person_on_roller_coaster" />
 
-
     <TextView
         android:id="@+id/tv_result_four"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="33sp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
         android:fontFamily="@font/metamorphous_regular"
         android:textColor="@color/black"
         android:gravity="center_horizontal"
@@ -406,13 +410,18 @@
         android:id="@+id/tv_result_five"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:textSize="17sp"
+        android:layout_marginTop="18dp"
+        android:textSize="20sp"
         android:fontFamily="@font/metamorphous_regular"
         android:paddingStart="7dp"
         android:paddingEnd="7dp"
         android:textColor="@color/black"
         android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="@android:color/transparent"/>
 
     <Button
         android:id="@+id/btn_try_again"
@@ -424,5 +433,10 @@
         android:layout_marginTop="14dp"
         android:layout_marginBottom="14dp"
         android:layout_gravity="center_horizontal" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="@android:color/transparent"/>
 
 </LinearLayout>
