@@ -1,5 +1,7 @@
 package com.example.daysalive
 import Calculations.Companion.getLifeStageMessage
+import android.annotation.SuppressLint
+import android.content.Context
 import android.graphics.Matrix
 import android.os.Bundle
 import android.view.View
@@ -12,14 +14,16 @@ import java.text.NumberFormat
 import java.time.DateTimeException
 import java.util.Locale
 import android.media.MediaPlayer
-import com.example.daysalive.R
+import android.view.inputmethod.InputMethodManager
 import java.time.LocalDate
+
 
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var dayCountStyledFinal: String
 
+    @SuppressLint("ServiceCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -191,6 +195,9 @@ class MainActivity : AppCompatActivity() {
 
         val paperCup = View.OnClickListener {
             try {
+
+                val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                inputMethodManager.hideSoftInputFromWindow(window.decorView.windowToken, 0)
 
 
                 planetMars.visibility = View.GONE
