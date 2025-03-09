@@ -4,10 +4,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="0dp">  <!-- Remove padding to ensure toolbar sticks to the top -->
+    android:padding="0dp">
 
 
-    <!-- Horizontal LinearLayout for Side-by-Side Images -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/purple_700"
+        android:elevation="0dp"
+        android:outlineProvider="bounds">
+
+        <!-- Custom Centered TextView with Unicode Clock -->
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/toolbar_message"
+            android:textColor="@android:color/white"
+            android:textSize="25.67sp"
+            android:fontFamily="cursive"/>
+    </androidx.appcompat.widget.Toolbar>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
@@ -57,7 +76,8 @@
         android:paddingBottom="10dp"
         android:paddingStart="9dp"
         android:gravity="center_vertical"
-        android:background="@color/lightPink" />
+        android:background="@color/lightPink"
+        android:fontFamily="fantasy"/>
 
     <View
         android:layout_width="match_parent"
@@ -75,8 +95,8 @@
         android:padding="10dp"
         android:textSize="18sp"
         android:textColorHint="@color/black"
-        android:fontFamily="sans-serif-light"
-        android:textStyle="italic"/>
+        android:textColor="@color/dark_purple"
+      />
 
     <EditText
         android:id="@+id/et_day"
@@ -87,9 +107,9 @@
         android:layout_marginBottom="20dp"
         android:padding="10dp"
         android:textSize="18sp"
+        android:fontFamily="sans-serif"
         android:textColorHint="@color/black"
-        android:fontFamily="sans-serif-light"
-        android:textStyle="italic"/>
+        android:textColor="@color/dark_purple"/>
 
     <EditText
         android:id="@+id/et_year"
@@ -100,9 +120,9 @@
         android:layout_marginBottom="16dp"
         android:padding="10dp"
         android:textSize="18sp"
+        android:fontFamily="sans-serif"
         android:textColorHint="@color/black"
-        android:fontFamily="sans-serif-light"
-        android:textStyle="italic"/>
+        android:textColor="@color/dark_purple"/>
 
     <Button
         android:id="@+id/btn_calculate"

@@ -5,6 +5,16 @@
             <item name="colorPrimaryVariant">@color/purple_700</item>
             <item name="android:statusBarColor">@color/purple_700</item>
             <item name="colorSurface">@color/purple_700</item> <!-- Fixes unwanted blue -->
+            <item name="colorPrimarySurface">@color/purple_700</item>
             <item name="colorSurfaceVariant">@color/purple_700</item> <!-- Fixes subtle tints -->
+            <item name="colorOnPrimary">@color/white</item>  <!-- Ensures text/icons remain visible -->
+            <item name="colorOnSurface">@color/purple_700</item>  <!-- Ensures contrast on surfaces -->
         </style>
+
+        <style name="ToolbarTitleStyle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+            <item name="android:textColor">@android:color/white</item>
+            <item name="android:textSize">23sp</item>
+            <item name="android:fontFamily">fantasy</item>
+        </style>
+
     </resources>

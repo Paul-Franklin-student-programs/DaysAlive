@@ -11,6 +11,7 @@
     <color name="dark_purple">#800080</color>
     <color name="myTextColor">#000000</color>
     <color name="lightPink">#F7E4F4</color>
+    <color name="red">#FF0000</color>
 
 
 </resources>
