@@ -54,6 +54,24 @@ class Calculations {
             }
         }
 
+        fun getZodiacQuote(sign: String): String {
+            return when (sign.lowercase()) {
+                "aries" -> "The secret of getting ahead is getting started. — Mark Twain"
+                "taurus" -> "Adopt the pace of nature: her secret is patience. — Ralph Waldo Emerson"
+                "gemini" -> "The measure of intelligence is the ability to change. — Albert Einstein"
+                "cancer" -> "The best and most beautiful things in the world cannot be seen or even touched – they must be felt with the heart. — Helen Keller"
+                "leo" -> "If you want to shine like the sun, first burn like the sun. — A.P.J. Abdul Kalam"
+                "virgo" -> "Success is the sum of small efforts, repeated day in and day out. — Robert Collier"
+                "libra" -> "An eye for an eye will only make the whole world blind. — Mahatma Gandhi"
+                "scorpio" -> "He who has a why to live can bear almost any how. — Friedrich Nietzsche"
+                "sagittarius" -> "A mind that is stretched by a new experience can never go back to its old dimensions. — Oliver Wendell Holmes"
+                "capricorn" -> "It is not in the stars to hold our destiny but in ourselves. — William Shakespeare"
+                "aquarius" -> "The ones who are crazy enough to think they can change the world are the ones who do. — Steve Jobs"
+                "pisces" -> "Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world. — Albert Einstein"
+                else -> "Unknown zodiac sign. Please enter a valid sign."
+            }
+        }
+
     }
 }
 

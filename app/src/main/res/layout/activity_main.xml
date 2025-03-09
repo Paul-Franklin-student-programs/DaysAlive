@@ -15,7 +15,7 @@
         android:elevation="0dp"
         android:outlineProvider="bounds">
 
-        <!-- Custom Centered TextView with Unicode Clock -->
+
         <TextView
             android:id="@+id/toolbar_title"
             android:layout_width="wrap_content"
@@ -23,7 +23,7 @@
             android:layout_gravity="center"
             android:text="@string/toolbar_message"
             android:textColor="@android:color/white"
-            android:textSize="25.67sp"
+            android:textSize="25sp"
             android:fontFamily="cursive"/>
     </androidx.appcompat.widget.Toolbar>
 
@@ -59,7 +59,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="1.5dp"
+        android:layout_height="2.25dp"
         android:background="@color/black"
         android:layout_marginTop="0dp"
         android:layout_marginBottom="0dp"/>
@@ -81,7 +81,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="1.5dp"
+        android:layout_height="2.25dp"
         android:background="@color/black"
         android:layout_marginBottom="20dp" />
 
@@ -295,7 +295,151 @@
         android:src="@drawable/age_100"
         android:contentDescription="@string/person_on_roller_coaster" />
 
-        <Button
+
+    <TextView
+        android:id="@+id/tv_result_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@color/dark_purple"
+        android:gravity="center_horizontal"
+        android:visibility="gone"
+        android:padding="2dp"/>
+
+    <ImageView
+        android:id="@+id/planet_jupiter"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@drawable/planet_jupiter"
+        android:contentDescription="@string/old_person_with_family"
+        android:scaleType="fitCenter"
+        android:layout_gravity="bottom"
+        android:adjustViewBounds="true"/>
+
+    <ImageView
+        android:id="@+id/planet_mars"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@drawable/planet_mars"
+        android:contentDescription="@string/old_person_with_family"
+        android:scaleType="fitCenter"
+        android:layout_gravity="bottom"
+        android:adjustViewBounds="true"/>
+
+    <ImageView
+        android:id="@+id/planet_mercury"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@drawable/planet_mercury"
+        android:contentDescription="@string/old_person_with_family"
+        android:scaleType="fitCenter"
+        android:layout_gravity="bottom"
+        android:adjustViewBounds="true"/>
+
+    <ImageView
+        android:id="@+id/planet_neptune"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@drawable/planet_neptune"
+        android:contentDescription="@string/old_person_with_family"
+        android:scaleType="fitCenter"
+        android:layout_gravity="bottom"
+        android:adjustViewBounds="true"/>
+
+    <ImageView
+        android:id="@+id/planet_pluto"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@drawable/planet_pluto"
+        android:contentDescription="@string/old_person_with_family"
+        android:scaleType="fitCenter"
+        android:layout_gravity="bottom"
+        android:adjustViewBounds="true"/>
+
+    <ImageView
+        android:id="@+id/planet_saturn"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@drawable/planet_saturn"
+        android:contentDescription="@string/old_person_with_family"
+        android:scaleType="fitCenter"
+        android:layout_gravity="bottom"
+        android:adjustViewBounds="true"/>
+
+    <ImageView
+        android:id="@+id/planet_the_moon"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@drawable/planet_the_moon"
+        android:contentDescription="@string/old_person_with_family"
+        android:scaleType="fitCenter"
+        android:layout_gravity="bottom"
+        android:adjustViewBounds="true"/>
+
+    <ImageView
+        android:id="@+id/planet_the_sun"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@drawable/planet_the_sun"
+        android:contentDescription="@string/old_person_with_family"
+        android:scaleType="fitCenter"
+        android:layout_gravity="bottom"
+        android:adjustViewBounds="true"/>
+
+    <ImageView
+        android:id="@+id/planet_uranus"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@drawable/planet_uranus"
+        android:contentDescription="@string/old_person_with_family"
+        android:scaleType="fitCenter"
+        android:layout_gravity="bottom"
+        android:adjustViewBounds="true"/>
+
+    <ImageView
+        android:id="@+id/planet_venus"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@drawable/planet_venus"
+        android:contentDescription="@string/old_person_with_family"
+        android:scaleType="fitCenter"
+        android:layout_gravity="bottom"
+        android:adjustViewBounds="true"/>
+
+
+    <TextView
+        android:id="@+id/tv_result_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@color/dark_purple"
+        android:gravity="center_horizontal"
+        android:visibility="gone"
+        android:padding="2dp"/>
+
+    <Button
         android:id="@+id/btn_try_again"
         android:layout_width="178dp"
         android:layout_height="49dp"
@@ -305,6 +449,5 @@
         android:layout_marginTop="14dp"
         android:layout_marginBottom="14dp"
         android:layout_gravity="center_horizontal" />
-
 
 </LinearLayout>
