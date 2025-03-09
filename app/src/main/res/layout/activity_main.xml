@@ -23,7 +23,7 @@
             android:layout_gravity="center"
             android:text="@string/toolbar_message"
             android:textColor="@android:color/white"
-            android:textSize="23.6sp"
+            android:textSize="31sp"
             android:fontFamily="cursive"/>
     </androidx.appcompat.widget.Toolbar>
 
