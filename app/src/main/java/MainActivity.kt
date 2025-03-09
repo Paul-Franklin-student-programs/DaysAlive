@@ -1,5 +1,6 @@
 package com.example.daysalive
 import Calculations.Companion.getLifeStageMessage
+import android.graphics.Matrix
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -23,6 +24,23 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val myLogo = findViewById<ImageView>(R.id.myLogo)
+        // Create a Matrix object for zooming
+        val matrix = Matrix()
+
+        // Scale the image (increase the zoom by setting values greater than 1)
+        val scaleX = .25f // Increase horizontal scale (adjust as needed)
+        val scaleY = .25f // Increase vertical scale (adjust as needed)
+
+        matrix.setScale(scaleX, scaleY)
+
+        // Translate the image to reposition it after zooming
+        val translateX = -29f // Move image left (adjust as needed)
+        val translateY = -28f // Move image up (adjust as needed)
+        matrix.postTranslate(translateX, translateY)
+
+        // Apply the transformation to the ImageView
+        myLogo.imageMatrix = matrix
 
         // Access UI elements
         val tryAgainButton = findViewById<TextView>(R.id.btn_try_again)
