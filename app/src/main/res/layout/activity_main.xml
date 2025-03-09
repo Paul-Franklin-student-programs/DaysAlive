@@ -297,7 +297,7 @@
 
 
     <TextView
-        android:id="@+id/tv_result_4"
+        android:id="@+id/tv_result_four"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="26sp"
@@ -429,7 +429,7 @@
 
 
     <TextView
-        android:id="@+id/tv_result_5"
+        android:id="@+id/tv_result_five"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="26sp"
