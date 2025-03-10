@@ -98,6 +98,22 @@ class Calculations {
             else -> "Unknown"
         }
 
+        fun getZodiacQuote(sign: String): String = when (sign) {
+            "Aries" -> "\"The secret of getting ahead is getting started.\"\n\n- Mark Twain"
+            "Taurus" -> "\"Adopt the pace of nature: her secret is patience.\"\n\n- Ralph Waldo Emerson"
+            "Gemini" -> "\"The measure of intelligence is the ability to change.\"\n\n- Albert Einstein"
+            "Cancer" -> "\"The best and most beautiful things in the world cannot be seen or even touched – they must be felt with the heart.\"\n\n- Helen Keller"
+            "Leo" -> "\"If you want to shine like the sun, first burn like the sun.\"\n\n- A.P.J. Abdul Kalam"
+            "Virgo" -> "\"Success is the sum of small efforts, repeated day in and day out.\"\n\n- Robert Collier"
+            "Libra" -> "\"An eye for an eye will only make the whole world blind.\"\n\n- Mahatma Gandhi"
+            "Scorpio" -> "\"He who has a why to live can bear almost any how.\"\n\n- Friedrich Nietzsche"
+            "Sagittarius" -> "\"A mind that is stretched by a new experience can never go back to its old dimensions.\"\n\n- Oliver Wendell Holmes"
+            "Capricorn" -> "\"It is not in the stars to hold our destiny but in ourselves.\"\n\n- William Shakespeare"
+            "Aquarius" -> "\"The ones who are crazy enough to think they can change the world are the ones who do.\"\n\n- Steve Jobs"
+            "Pisces" -> "\"Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world.\"\n\n- Albert Einstein"
+            else -> "Unknown zodiac sign. Please enter a valid sign."
+        }
+
     }
 }
 

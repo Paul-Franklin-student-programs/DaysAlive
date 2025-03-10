@@ -128,7 +128,7 @@ class DaysAliveUnitTesting {
         val month = "2"
         val year = "1951"
         val message = "Error: The date you entered does not exist!"
-        assertEquals(message, Calculations2.dateExceptionTest(day,month,year))
+        assertEquals(message, Calculations2.dateExceptionTest(day, month, year))
 
     }
 
@@ -138,7 +138,7 @@ class DaysAliveUnitTesting {
         val month = "6"
         val year = "2000"
         val message = "Error: The date you entered does not exist!"
-        assertEquals(message, Calculations2.dateExceptionTest(day,month,year))
+        assertEquals(message, Calculations2.dateExceptionTest(day, month, year))
 
     }
 
@@ -148,7 +148,7 @@ class DaysAliveUnitTesting {
         val month = "4"
         val year = "123456789"
         val message = "Error: Please enter valid birthday information"
-        assertEquals(message, Calculations2.dateExceptionTest(day,month,year))
+        assertEquals(message, Calculations2.dateExceptionTest(day, month, year))
 
     }
 
@@ -158,7 +158,7 @@ class DaysAliveUnitTesting {
         val month = "4"
         val year = null
         val message = "Error: Do not leave fields blank"
-        assertEquals(message, Calculations2.dateExceptionTest(day,month,year))
+        assertEquals(message, Calculations2.dateExceptionTest(day, month, year))
 
     }
 
@@ -168,7 +168,7 @@ class DaysAliveUnitTesting {
         val month = null
         val year = null
         val message = "Error: Do not leave fields blank"
-        assertEquals(message, Calculations2.dateExceptionTest(day,month,year))
+        assertEquals(message, Calculations2.dateExceptionTest(day, month, year))
 
     }
 
@@ -178,7 +178,7 @@ class DaysAliveUnitTesting {
         val month = null
         val year = null
         val message = "Error: Do not leave fields blank"
-        assertEquals(message, Calculations2.dateExceptionTest(day,month,year))
+        assertEquals(message, Calculations2.dateExceptionTest(day, month, year))
 
     }
 
@@ -187,24 +187,62 @@ class DaysAliveUnitTesting {
         val day = 26
         val month = 10
         val year = 1991
-        val birthDate = LocalDate.of(year,month,day)
+        val birthDate = LocalDate.of(year, month, day)
         val today = LocalDate.now()
         val expectedDays = ChronoUnit.DAYS.between(birthDate, today)
         val message = "You have been alive for... $expectedDays days!"
-        assertEquals(message, Calculations2.dateExceptionTest2(day.toString(),month.toString(),year.toString()))
+        assertEquals(
+            message,
+            Calculations2.dateExceptionTest2(day.toString(), month.toString(), year.toString())
+        )
     }
 
-    @Test // T15
+    @Test // T16
     fun testDaysAliveReturnedString2() {
         val day = 19
         val month = 5
         val year = 1946
-        val birthDate = LocalDate.of(year,month,day)
+        val birthDate = LocalDate.of(year, month, day)
         val today = LocalDate.now()
         val expectedDays = ChronoUnit.DAYS.between(birthDate, today)
         val message = "You have been alive for... $expectedDays days!"
-        assertEquals(message, Calculations2.dateExceptionTest2(day.toString(),month.toString(),year.toString()))
+        assertEquals(
+            message,
+            Calculations2.dateExceptionTest2(day.toString(), month.toString(), year.toString())
+        )
 
+    }
+
+    @Test // T17
+    fun testDecadeMessage() {
+        val daysAmount: Long = 14703
+        val decadeMessage = "You inspire others with your success as you achieve your dreams!"
+        assertEquals(decadeMessage, Calculations.getLifeStageMessage(daysAmount))
+
+    }
+
+    @Test // T18
+    fun testDecadeMessage2() {
+        val daysAmount: Long = 23
+        val decadeMessage = "You're exploring and learning. Have fun, and follow your heart!"
+        assertEquals(decadeMessage, Calculations.getLifeStageMessage(daysAmount))
+
+    }
+
+    @Test // T19
+    fun testZodiacQuote() {
+        val sign = "Leo"
+        val signQuote =
+            "\"If you want to shine like the sun, first burn like the sun.\"\n\n- A.P.J. Abdul Kalam"
+        assertEquals(signQuote, Calculations.getZodiacQuote(sign))
+    }
+
+    @Test // T20
+    fun testZodiacQuote2() {
+        val sign = "Sagittarius"
+        val signQuote =
+            "\"A mind that is stretched by a new experience can never go back to its old dimensions.\"\n\n- Oliver Wendell Holmes"
+        assertEquals(signQuote, Calculations.getZodiacQuote(sign))
     }
 }
 
