@@ -55,6 +55,25 @@ class Calculations {
         }
 
 
+        fun determineSign(dayOfMonth: Int, monthValue: Int): String {
+            return when {
+                (monthValue == 3 && dayOfMonth >= 21) || (monthValue == 4 && dayOfMonth <= 19) -> "Aries"
+                (monthValue == 4 && dayOfMonth >= 20) || (monthValue == 5 && dayOfMonth <= 20) -> "Taurus"
+                (monthValue == 5 && dayOfMonth >= 21) || (monthValue == 6 && dayOfMonth <= 20) -> "Gemini"
+                (monthValue == 6 && dayOfMonth >= 21) || (monthValue == 7 && dayOfMonth <= 22) -> "Cancer"
+                (monthValue == 7 && dayOfMonth >= 23) || (monthValue == 8 && dayOfMonth <= 22) -> "Leo"
+                (monthValue == 8 && dayOfMonth >= 23) || (monthValue == 9 && dayOfMonth <= 22) -> "Virgo"
+                (monthValue == 9 && dayOfMonth >= 23) || (monthValue == 10 && dayOfMonth <= 22) -> "Libra"
+                (monthValue == 10 && dayOfMonth >= 23) || (monthValue == 11 && dayOfMonth <= 21) -> "Scorpio"
+                (monthValue == 11 && dayOfMonth >= 22) || (monthValue == 12 && dayOfMonth <= 21) -> "Sagittarius"
+                (monthValue == 12 && dayOfMonth >= 22) || (monthValue == 1 && dayOfMonth <= 19) -> "Capricorn"
+                (monthValue == 1 && dayOfMonth >= 20) || (monthValue == 2 && dayOfMonth <= 18) -> "Aquarius"
+                (monthValue == 2 && dayOfMonth >= 19) || (monthValue == 3 && dayOfMonth <= 20) -> "Pisces"
+                else -> "Error: Unable to find sign"  // Error case (invalid date)
+            }
+        }
+
+
     }
 }
 

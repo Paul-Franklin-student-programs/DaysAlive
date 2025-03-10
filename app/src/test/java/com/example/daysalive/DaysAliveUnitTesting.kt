@@ -22,10 +22,11 @@ class DaysAliveUnitTesting {
 
         @Test
         fun testZodiacSignDetermination() {
+            val month = 3
+            val day = 10
+            val result = "Pisces"
 
-
-
-
+            assertEquals(result, Calculations.determineSign(day,month))
         }
     }
 
