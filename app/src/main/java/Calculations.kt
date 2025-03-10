@@ -1,6 +1,13 @@
+import android.content.Context
+import android.view.View
+import android.view.inputmethod.InputMethodManager
+import com.example.daysalive.R
+import java.text.NumberFormat
+import java.time.DateTimeException
 import java.time.LocalDate
 import java.time.temporal.ChronoUnit
 import java.time.format.DateTimeParseException
+import java.util.Locale
 
 class Calculations {
     companion object {
@@ -29,6 +36,8 @@ class Calculations {
 
                     // Step 5: Calculate and return difference in days
                     ChronoUnit.DAYS.between(userBorn, todayDate)
+
+
                 } catch (e: DateTimeParseException) {
                     "Error: The date you entered does not exist!"
                 }
@@ -73,6 +82,21 @@ class Calculations {
             }
         }
 
+        fun determinePlanet(sign: String): String = when (sign) {
+            "Aries" -> "Mars"
+            "Taurus" -> "Venus"
+            "Gemini" -> "Mercury"
+            "Cancer" -> "Moon"
+            "Leo" -> "Sun"
+            "Virgo" -> "Mercury"
+            "Libra" -> "Venus"
+            "Scorpio" -> "Pluto"
+            "Sagittarius" -> "Jupiter"
+            "Capricorn" -> "Saturn"
+            "Aquarius" -> "Uranus"
+            "Pisces" -> "Neptune"
+            else -> "Unknown"
+        }
 
     }
 }

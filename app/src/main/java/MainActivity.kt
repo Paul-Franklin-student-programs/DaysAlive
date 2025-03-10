@@ -22,6 +22,7 @@ import java.time.LocalDate
 class MainActivity : AppCompatActivity() {
 
     private lateinit var dayCountStyledFinal: String
+    private lateinit var errorMessage: String
 
     @SuppressLint("ServiceCast")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -57,7 +58,6 @@ class MainActivity : AppCompatActivity() {
         val resultTextViewYears = findViewById<TextView>(R.id.tv_result)
         val resultTextViewMessage = findViewById<TextView>(R.id.tv_result_two)
         val errorTextViewMessage = findViewById<TextView>(R.id.tv_result_three)
-
         val firstZodiacMessage = findViewById<TextView>(R.id.tv_result_four)
         val secondZodiacMessage = findViewById<TextView>(R.id.tv_result_five)
         val planetJupiter = findViewById<ImageView>(R.id.planet_jupiter)
