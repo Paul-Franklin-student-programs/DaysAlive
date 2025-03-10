@@ -163,7 +163,7 @@
         android:gravity="start"
         android:padding="13dp"
         android:textColor="@color/myTextColor"
-        android:textSize="@dimen/decade_message_text_size"
+        android:textSize="24sp"
         android:visibility="gone" />
 
     <ImageView

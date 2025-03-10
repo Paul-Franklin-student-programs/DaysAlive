@@ -285,6 +285,7 @@ class MainActivity : AppCompatActivity() {
                 planetTheSun.setOnClickListener(paperCup)
                 planetUranus.setOnClickListener(paperCup)
                 planetVenus.setOnClickListener(paperCup)
+                planetJupiter.setOnClickListener(paperCup)
 
                 age0.setOnClickListener(glassBowl)
                 age10.setOnClickListener(glassBowl)
