@@ -27,7 +27,7 @@ class Calculations2 {
                 val dayCountRaw = result
                 val dayCountStyled = NumberFormat.getNumberInstance(Locale.US).format(dayCountRaw)
 
-                return "You have been alive for... \n$dayCountStyled days!"
+                return "You have been alive for... $dayCountStyled days!"
 
             } catch (e: Exception) {
 
@@ -45,6 +45,42 @@ class Calculations2 {
             }
         }
 
+
+        fun dateExceptionTest2(day: String?, month: String?, year: String?): Any {
+            try {
+
+                // Call birthdayCalc and store the result
+                val result = Calculations.birthdayCalc(day, month, year)
+
+                if (result is String) {
+                    return result
+                }
+
+                // Ensure result is a valid number before casting
+                if (result !is Long) {
+                    return "Unexpected result type from birthdayCalc()"
+                }
+
+                val dayCountRaw = result
+
+
+                return "You have been alive for... $dayCountRaw days!"
+
+            } catch (e: Exception) {
+
+                when (e) {
+                    is NumberFormatException, is DateTimeException -> {
+                        return "Error: The date you entered does not exist!"
+                    }
+
+                    else -> {
+                        return "An unexpected error occurred.\nPlease try again."
+                    }
+                }
+
+
+            }
+        }
 
     }
 }

@@ -172,13 +172,38 @@ class DaysAliveUnitTesting {
 
     }
 
-    @Test // T13
+    @Test // T14
     fun testAllFieldsBlankHandling() {
         val day = null
         val month = null
         val year = null
         val message = "Error: Do not leave fields blank"
         assertEquals(message, Calculations2.dateExceptionTest(day,month,year))
+
+    }
+
+    @Test // T15
+    fun testDaysAliveReturnedString() {
+        val day = 26
+        val month = 10
+        val year = 1991
+        val birthDate = LocalDate.of(year,month,day)
+        val today = LocalDate.now()
+        val expectedDays = ChronoUnit.DAYS.between(birthDate, today)
+        val message = "You have been alive for... $expectedDays days!"
+        assertEquals(message, Calculations2.dateExceptionTest2(day.toString(),month.toString(),year.toString()))
+    }
+
+    @Test // T15
+    fun testDaysAliveReturnedString2() {
+        val day = 19
+        val month = 5
+        val year = 1946
+        val birthDate = LocalDate.of(year,month,day)
+        val today = LocalDate.now()
+        val expectedDays = ChronoUnit.DAYS.between(birthDate, today)
+        val message = "You have been alive for... $expectedDays days!"
+        assertEquals(message, Calculations2.dateExceptionTest2(day.toString(),month.toString(),year.toString()))
 
     }
 }
