@@ -5,8 +5,8 @@
     <string name="try_again">Try Again</string>
     <string name="calculate_days">Calculate Days</string>
     <string name="enter_year_1900_2025"><i>Enter year (1900 - 2025)</i></string>
-    <string name="enter_the_day_1_31"><i>Enter the day (1 - 31)</i></string>
-    <string name="enter_month_1_12"><i>Enter a month (1 - 12)</i></string>
+    <string name="enter_the_day_1_31"><i>Enter day (1 - 31)</i></string>
+    <string name="enter_month_1_12"><i>Enter month (1 - 12)</i></string>
     <string name="enter_your_birth_date">Enter your birth date:</string>
     <string name="days_alive_title">Days Alive Title</string>
     <string name="days_alive_logo">Days Alive Logo</string>
