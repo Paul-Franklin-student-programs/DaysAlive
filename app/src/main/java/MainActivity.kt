@@ -114,6 +114,8 @@ class MainActivity : AppCompatActivity() {
 
         val glassBowl = View.OnClickListener {
 
+            playSound(R.raw.daysalive_sound_zodiac)
+
             dayCountStyledFinal = dayCountStyledFinal.drop(28)
             resultTextViewYears.text = dayCountStyledFinal
 
