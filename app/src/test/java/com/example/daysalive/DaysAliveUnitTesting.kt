@@ -1,5 +1,7 @@
 package com.example.daysalive
 
+import com.paulfranklin.daysalive.Calculations
+import com.paulfranklin.daysalive.Calculations2
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import java.time.LocalDate

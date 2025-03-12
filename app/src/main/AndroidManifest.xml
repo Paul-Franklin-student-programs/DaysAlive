@@ -1,12 +1,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.daysalive">
+    package="com.paulfranklin.daysalive">
 
     <application
         android:theme="@style/Theme.YourApp">
 
 
         <activity
-            android:name="MainActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

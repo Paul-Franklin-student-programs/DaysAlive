@@ -19,7 +19,7 @@
         android:layout_height="0dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/topGuideline"
-        android:background="@color/dark_purple">
+        android:background="@color/hourglass">
 
         <ImageView
             android:id="@+id/myTitle"
@@ -34,9 +34,9 @@
         android:scaleType="centerCrop"
         android:adjustViewBounds="false"
         android:src="@drawable/days_alive_title"
-            android:scaleY="1.105"
-            android:scaleX="1.105"
-            android:paddingEnd="15dp"
+            android:scaleY="1"
+            android:scaleX="1"
+            android:paddingEnd="16.5dp"
             android:clipToPadding="false"
             />
 

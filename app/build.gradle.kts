@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.daysalive"
+    namespace = "com.paulfranklin.daysalive"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.daysalive"
+        applicationId = "com.paulfranklin.daysalive"
         minSdk = 26
         targetSdk = 35
         versionCode = 1
