@@ -440,11 +440,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
         android:fontFamily="@font/metamorphous_regular"
-        android:paddingStart="9dp"
-        android:paddingEnd="7dp"
         android:textColor="@color/black"
-        android:textSize="20sp"
-        android:visibility="gone" />
+        android:textSize="25sp"
+        android:visibility="gone"
+        android:gravity="center_horizontal"/>
 
     <View
         android:layout_width="match_parent"
