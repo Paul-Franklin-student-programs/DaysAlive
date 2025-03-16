@@ -204,11 +204,11 @@ class MainActivity : AppCompatActivity() {
                         view ->
                     try {
                         Handler(Looper.getMainLooper()).postDelayed({
-                            val activity = view.context as Activity // Ensure correct context
+                            val activity = view.context as Activity
 
-                            // Create and show custom toast
-                            val toast = Toast.makeText(activity, "Tap Image For More!", Toast.LENGTH_LONG)
-                            toast.showCustomToast("Tap Image For More!", activity)
+                            // ✅ Create the Toast first, then call `showCustomToast()` on it
+                            activeToast = Toast.makeText(activity, "Tap Image For More!", Toast.LENGTH_LONG)
+                                .showCustomToast("Tap Image For More!", activity) // Call on Toast instance
                         }, 3000)
 
 

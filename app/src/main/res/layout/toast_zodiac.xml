@@ -36,7 +36,7 @@
                     android:id="@+id/button_accent_border"
                     android:layout_width="4dp"
                     android:layout_height="match_parent"
-                    android:background="#3EAA56" />
+                    android:background="@color/dark_purple" />
 
                 <TextView
                     android:id="@+id/toast_text"
