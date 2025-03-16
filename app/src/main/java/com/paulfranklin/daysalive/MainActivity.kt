@@ -1,6 +1,7 @@
 package com.paulfranklin.daysalive
 import com.paulfranklin.daysalive.Calculations.Companion.getLifeStageMessage
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.content.Context
 import android.graphics.Matrix
 import android.os.Bundle
@@ -14,10 +15,11 @@ import java.text.NumberFormat
 import java.time.DateTimeException
 import java.util.Locale
 import android.media.MediaPlayer
+import android.os.Handler
+import android.os.Looper
 import android.view.inputmethod.InputMethodManager
 import java.time.LocalDate
-
-
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,6 +30,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        var activeToast: Toast? = null
 
         val myLogo = findViewById<ImageView>(R.id.myLogo)
         // Create a Matrix object for zooming
@@ -114,6 +118,9 @@ class MainActivity : AppCompatActivity() {
 
         val glassBowl = View.OnClickListener {
 
+            activeToast?.cancel()  // Manually dismiss the toast
+            activeToast = null
+
             playSound(R.raw.daysalive_sound_zodiac)
 
             dayCountStyledFinal = dayCountStyledFinal.drop(28)
@@ -194,7 +201,17 @@ class MainActivity : AppCompatActivity() {
 
 
                 val paperCup = View.OnClickListener {
+                        view ->
                     try {
+                        Handler(Looper.getMainLooper()).postDelayed({
+                            val activity = view.context as Activity // Ensure correct context
+
+                            // Create and show custom toast
+                            val toast = Toast.makeText(activity, "Tap Image For More!", Toast.LENGTH_LONG)
+                            toast.showCustomToast("Tap Image For More!", activity)
+                        }, 3000)
+
+
                         val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
                         inputMethodManager.hideSoftInputFromWindow(window.decorView.windowToken, 0)
 
