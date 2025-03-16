@@ -207,8 +207,8 @@ class MainActivity : AppCompatActivity() {
                             val activity = view.context as Activity
 
                             // ✅ Create the Toast first, then call `showCustomToast()` on it
-                            activeToast = Toast.makeText(activity, "Tap Image For More!", Toast.LENGTH_LONG)
-                                .showCustomToast("Tap Image For More!", activity) // Call on Toast instance
+                            activeToast = Toast.makeText(activity, "Follow the signs... 🔮", Toast.LENGTH_LONG)
+                                .showCustomToast("Follow the signs... 🔮", activity) // Call on Toast instance
                         }, 3000)
 
 
