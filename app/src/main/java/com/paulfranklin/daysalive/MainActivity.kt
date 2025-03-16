@@ -144,50 +144,50 @@ class MainActivity : AppCompatActivity() {
             val monthInt2 = month2.toInt()
             val userBorn2 = LocalDate.of(1900, monthInt2, dayInt2)
             val sign = when {
-                (userBorn2.monthValue == 3 && userBorn2.dayOfMonth >= 21) || (userBorn2.monthValue == 4 && userBorn2.dayOfMonth <= 19) -> "Aries"
-                (userBorn2.monthValue == 4 && userBorn2.dayOfMonth >= 20) || (userBorn2.monthValue == 5 && userBorn2.dayOfMonth <= 20) -> "Taurus"
-                (userBorn2.monthValue == 5 && userBorn2.dayOfMonth >= 21) || (userBorn2.monthValue == 6 && userBorn2.dayOfMonth <= 20) -> "Gemini"
-                (userBorn2.monthValue == 6 && userBorn2.dayOfMonth >= 21) || (userBorn2.monthValue == 7 && userBorn2.dayOfMonth <= 22) -> "Cancer"
-                (userBorn2.monthValue == 7 && userBorn2.dayOfMonth >= 23) || (userBorn2.monthValue == 8 && userBorn2.dayOfMonth <= 22) -> "Leo"
-                (userBorn2.monthValue == 8 && userBorn2.dayOfMonth >= 23) || (userBorn2.monthValue == 9 && userBorn2.dayOfMonth <= 22) -> "Virgo"
-                (userBorn2.monthValue == 9 && userBorn2.dayOfMonth >= 23) || (userBorn2.monthValue == 10 && userBorn2.dayOfMonth <= 22) -> "Libra"
-                (userBorn2.monthValue == 10 && userBorn2.dayOfMonth >= 23) || (userBorn2.monthValue == 11 && userBorn2.dayOfMonth <= 21) -> "Scorpio"
-                (userBorn2.monthValue == 11 && userBorn2.dayOfMonth >= 22) || (userBorn2.monthValue == 12 && userBorn2.dayOfMonth <= 21) -> "Sagittarius"
-                (userBorn2.monthValue == 12 && userBorn2.dayOfMonth >= 22) || (userBorn2.monthValue == 1 && userBorn2.dayOfMonth <= 19) -> "Capricorn"
-                (userBorn2.monthValue == 1 && userBorn2.dayOfMonth >= 20) || (userBorn2.monthValue == 2 && userBorn2.dayOfMonth <= 18) -> "Aquarius"
-                (userBorn2.monthValue == 2 && userBorn2.dayOfMonth >= 19) || (userBorn2.monthValue == 3 && userBorn2.dayOfMonth <= 20) -> "Pisces"
+                (userBorn2.monthValue == 3 && userBorn2.dayOfMonth >= 21) || (userBorn2.monthValue == 4 && userBorn2.dayOfMonth <= 19) -> "Aries♈"
+                (userBorn2.monthValue == 4 && userBorn2.dayOfMonth >= 20) || (userBorn2.monthValue == 5 && userBorn2.dayOfMonth <= 20) -> "Taurus♉"
+                (userBorn2.monthValue == 5 && userBorn2.dayOfMonth >= 21) || (userBorn2.monthValue == 6 && userBorn2.dayOfMonth <= 20) -> "Gemini♊"
+                (userBorn2.monthValue == 6 && userBorn2.dayOfMonth >= 21) || (userBorn2.monthValue == 7 && userBorn2.dayOfMonth <= 22) -> "Cancer♋"
+                (userBorn2.monthValue == 7 && userBorn2.dayOfMonth >= 23) || (userBorn2.monthValue == 8 && userBorn2.dayOfMonth <= 22) -> "Leo♌"
+                (userBorn2.monthValue == 8 && userBorn2.dayOfMonth >= 23) || (userBorn2.monthValue == 9 && userBorn2.dayOfMonth <= 22) -> "Virgo♍"
+                (userBorn2.monthValue == 9 && userBorn2.dayOfMonth >= 23) || (userBorn2.monthValue == 10 && userBorn2.dayOfMonth <= 22) -> "Libra♎"
+                (userBorn2.monthValue == 10 && userBorn2.dayOfMonth >= 23) || (userBorn2.monthValue == 11 && userBorn2.dayOfMonth <= 21) -> "Scorpio♏"
+                (userBorn2.monthValue == 11 && userBorn2.dayOfMonth >= 22) || (userBorn2.monthValue == 12 && userBorn2.dayOfMonth <= 21) -> "Sagittarius♐"
+                (userBorn2.monthValue == 12 && userBorn2.dayOfMonth >= 22) || (userBorn2.monthValue == 1 && userBorn2.dayOfMonth <= 19) -> "Capricorn♑"
+                (userBorn2.monthValue == 1 && userBorn2.dayOfMonth >= 20) || (userBorn2.monthValue == 2 && userBorn2.dayOfMonth <= 18) -> "Aquarius♒"
+                (userBorn2.monthValue == 2 && userBorn2.dayOfMonth >= 19) || (userBorn2.monthValue == 3 && userBorn2.dayOfMonth <= 20) -> "Pisces♓"
                 else -> "Error: Unable to find sign"  // Error case (invalid date)
             }
 
             val signQuote = when (sign) {
-                "Aries" -> "\"Courage, Drive, and Strength\""
-                "Taurus" -> "\"Patience, Stability, and Endurance\""
-                "Gemini" -> "\"Curiosity, Wit, and Adaptability\""
-                "Cancer" -> "\"Empathy, Protection, and Devotion\""
-                "Leo" -> "\"Confidence, Passion, and Leadership\""
-                "Virgo" -> "\"Precision, Logic, and Diligence\""
-                "Libra" -> "\"Harmony, Charm, and Fairness\""
-                "Scorpio" -> "\"Intensity, Mystery, and Power\""
-                "Sagittarius" -> "\"Adventure, Optimism, and Wisdom\""
-                "Capricorn" -> "\"Discipline, Ambition, and Resilience\""
-                "Aquarius" -> "\"Innovation, Vision, and Rebellion\""
-                "Pisces" -> "\"Imagination, Compassion, and Dreaming\""
+                "Aries♈" -> "\"Courage, Drive, and Strength\""
+                "Taurus♉" -> "\"Patience, Stability, and Endurance\""
+                "Gemini♊" -> "\"Curiosity, Wit, and Adaptability\""
+                "Cancer♋" -> "\"Empathy, Protection, and Devotion\""
+                "Leo♌" -> "\"Confidence, Passion, and Leadership\""
+                "Virgo♍" -> "\"Precision, Logic, and Diligence\""
+                "Libra♎" -> "\"Harmony, Charm, and Fairness\""
+                "Scorpio♏" -> "\"Intensity, Mystery, and Power\""
+                "Sagittarius♐" -> "\"Adventure, Optimism, and Wisdom\""
+                "Capricorn♑" -> "\"Discipline, Ambition, and Resilience\""
+                "Aquarius♒" -> "\"Innovation, Vision, and Rebellion\""
+                "Pisces♓" -> "\"Imagination, Compassion, and Dreaming\""
                 else -> "\"Unknown, Undefined, and Uncharted\""
             }
 
             when (sign) {
-                "Aries" -> planetMars.visibility = View.VISIBLE
-                "Taurus" -> planetVenus.visibility = View.VISIBLE
-                "Gemini" -> planetMercury.visibility = View.VISIBLE
-                "Cancer" -> planetTheMoon.visibility = View.VISIBLE
-                "Leo" -> planetTheSun.visibility = View.VISIBLE
-                "Virgo" -> planetMercury.visibility = View.VISIBLE
-                "Libra" -> planetVenus.visibility = View.VISIBLE
-                "Scorpio" -> planetPluto.visibility = View.VISIBLE
-                "Sagittarius" -> planetJupiter.visibility = View.VISIBLE
-                "Capricorn" -> planetSaturn.visibility = View.VISIBLE
-                "Aquarius" -> planetUranus.visibility = View.VISIBLE
-                "Pisces" -> planetNeptune.visibility = View.VISIBLE
+                "Aries♈" -> planetMars.visibility = View.VISIBLE
+                "Taurus♉" -> planetVenus.visibility = View.VISIBLE
+                "Gemini♊" -> planetMercury.visibility = View.VISIBLE
+                "Cancer♋" -> planetTheMoon.visibility = View.VISIBLE
+                "Leo♌" -> planetTheSun.visibility = View.VISIBLE
+                "Virgo♍" -> planetMercury.visibility = View.VISIBLE
+                "Libra♎" -> planetVenus.visibility = View.VISIBLE
+                "Scorpio♏" -> planetPluto.visibility = View.VISIBLE
+                "Sagittarius♐" -> planetJupiter.visibility = View.VISIBLE
+                "Capricorn♑" -> planetSaturn.visibility = View.VISIBLE
+                "Aquarius♒" -> planetUranus.visibility = View.VISIBLE
+                "Pisces♓" -> planetNeptune.visibility = View.VISIBLE
             }
 
             firstZodiacMessage.visibility = View.VISIBLE
@@ -295,16 +295,18 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 calculateButton.setOnClickListener(paperCup)
-                planetMars.setOnClickListener(paperCup)
-                planetMercury.setOnClickListener(paperCup)
-                planetNeptune.setOnClickListener(paperCup)
-                planetPluto.setOnClickListener(paperCup)
-                planetSaturn.setOnClickListener(paperCup)
-                planetTheMoon.setOnClickListener(paperCup)
-                planetTheSun.setOnClickListener(paperCup)
-                planetUranus.setOnClickListener(paperCup)
-                planetVenus.setOnClickListener(paperCup)
-                planetJupiter.setOnClickListener(paperCup)
+
+        /*
+        planetMars.setOnClickListener(paperCup)
+        planetMercury.setOnClickListener(paperCup)
+        planetNeptune.setOnClickListener(paperCup)
+        planetPluto.setOnClickListener(paperCup)
+        planetSaturn.setOnClickListener(paperCup)
+        planetTheMoon.setOnClickListener(paperCup)
+        planetTheSun.setOnClickListener(paperCup)
+        planetUranus.setOnClickListener(paperCup)
+        planetVenus.setOnClickListener(paperCup)
+        planetJupiter.setOnClickListener(paperCup)*/
 
                 age0.setOnClickListener(glassBowl)
                 age10.setOnClickListener(glassBowl)
