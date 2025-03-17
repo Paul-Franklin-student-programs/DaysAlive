@@ -29,6 +29,11 @@ class Calculations {
                     val userBorn = LocalDate.of(yearInt, monthInt, dayInt)
                     val todayDate = LocalDate.now()
 
+                    // Step 5: Prevent future dates
+                    if (userBorn.isAfter(todayDate)) {
+                        return "Error: Birthdate cannot be in the future"
+                    }
+
                     // Step 5: Calculate and return difference in days
                     ChronoUnit.DAYS.between(userBorn, todayDate)
 

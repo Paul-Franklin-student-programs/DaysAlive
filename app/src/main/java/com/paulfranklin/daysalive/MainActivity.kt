@@ -207,13 +207,7 @@ class MainActivity : AppCompatActivity() {
                 val paperCup = View.OnClickListener {
                         view ->
                     try {
-                        Handler(Looper.getMainLooper()).postDelayed({
-                            val activity = view.context as Activity
 
-                            // ✅ Create the Toast first, then call `showCustomToast()` on it
-                            activeToast = Toast.makeText(activity, "Follow the signs... 🔮", Toast.LENGTH_LONG)
-                                .showCustomToast("Follow the signs... 🔮", activity) // Call on Toast instance
-                        }, 3000)
 
 
                         val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
@@ -255,6 +249,8 @@ class MainActivity : AppCompatActivity() {
                             throw IllegalStateException("Unexpected result type from birthdayCalc()")
                         }
 
+
+
                         val dayCountRaw = result
                         val dayCountStyled = NumberFormat.getNumberInstance(Locale.US).format(dayCountRaw)
                         val daysAliveMessage = getLifeStageMessage(dayCountRaw)
@@ -264,7 +260,13 @@ class MainActivity : AppCompatActivity() {
                         if (promptTextView.visibility == View.VISIBLE) {
                             playSound(R.raw.daysalive_sound_correct)
                         }
+                        Handler(Looper.getMainLooper()).postDelayed({
+                            val activity = view.context as Activity
 
+                            // ✅ Create the Toast first, then call `showCustomToast()` on it
+                            activeToast = Toast.makeText(activity, "Follow the signs... 🔮", Toast.LENGTH_LONG)
+                                .showCustomToast("Follow the signs... 🔮", activity) // Call on Toast instance
+                        }, 3000)
                         // Hide input fields and show results
                         promptTextView.visibility = View.GONE
                         monthField.visibility = View.GONE
