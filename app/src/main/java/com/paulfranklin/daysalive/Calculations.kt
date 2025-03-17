@@ -44,7 +44,8 @@ class Calculations {
 
         fun getLifeStageMessage(daysAlive: Long): String {
             return when (daysAlive) {
-                in 0..3652 -> "You're exploring and learning. Have fun, and follow your heart!" // 0 - 9 years
+                in 0..364 -> "Feel the sun on your face, the dew on the grass, and the love of your family." // 0 - 9 years
+                in 365..3652 -> "You're exploring and learning. Have fun, and follow your heart!" // 0 - 9 years
                 in 3653..7304 -> "You're learning responsibility and finding out who you are. Be bold and free!" // 10 - 19 years
                 in 7305..10957 -> "Enjoy your new freedoms and make plans for the future!" // 20 - 29 years
                 in 10958..14609 -> "Friends, family, romance, independence, and everything in between!" // 30 - 39 years

@@ -77,17 +77,18 @@ class MainActivity : AppCompatActivity() {
 
 
         // Age-Specific Images
-        val age0 = findViewById<ImageView>(R.id.age_0_9)
-        val age10 = findViewById<ImageView>(R.id.age_10_19)
-        val age20 = findViewById<ImageView>(R.id.age_20_29)
-        val age30 = findViewById<ImageView>(R.id.age_30_39)
-        val age40 = findViewById<ImageView>(R.id.age_40_49)
-        val age50 = findViewById<ImageView>(R.id.age_50_59)
-        val age60 = findViewById<ImageView>(R.id.age_60_69)
-        val age70 = findViewById<ImageView>(R.id.age_70_79)
-        val age80 = findViewById<ImageView>(R.id.age_80_89)
-        val age90 = findViewById<ImageView>(R.id.age_90_99)
-        val age100 = findViewById<ImageView>(R.id.age_100)
+        val ageInfant = findViewById<ImageView>(R.id.age_0)
+        val ageChild = findViewById<ImageView>(R.id.age_0_9)
+        val ageTeenager = findViewById<ImageView>(R.id.age_10_19)
+        val ageYoungAdult = findViewById<ImageView>(R.id.age_20_29)
+        val ageAdult = findViewById<ImageView>(R.id.age_30_39)
+        val ageMiddleAge = findViewById<ImageView>(R.id.age_40_49)
+        val ageUpperAge = findViewById<ImageView>(R.id.age_50_59)
+        val ageRetire = findViewById<ImageView>(R.id.age_60_69)
+        val ageWisdom = findViewById<ImageView>(R.id.age_70_79)
+        val ageSenior = findViewById<ImageView>(R.id.age_80_89)
+        val ageElder = findViewById<ImageView>(R.id.age_90_99)
+        val ageCentury = findViewById<ImageView>(R.id.age_100)
 
         calculateButton.isSoundEffectsEnabled = false
         tryAgainButton.isSoundEffectsEnabled = false
@@ -102,17 +103,18 @@ class MainActivity : AppCompatActivity() {
 
         fun determineImage(daysAlive: Long) {
             when (daysAlive) {
-                in 0..3652 -> age0.visibility = View.VISIBLE
-                in 3653..7304 -> age10.visibility = View.VISIBLE
-                in 7305..10957 -> age20.visibility = View.VISIBLE
-                in 10958..14609 -> age30.visibility = View.VISIBLE
-                in 14610..18262 -> age40.visibility = View.VISIBLE
-                in 18263..21914 -> age50.visibility = View.VISIBLE
-                in 21915..25567 -> age60.visibility = View.VISIBLE
-                in 25568..29219 -> age70.visibility = View.VISIBLE
-                in 29220..32872 -> age80.visibility = View.VISIBLE
-                in 32873..36524 -> age90.visibility = View.VISIBLE
-                else -> age100.visibility = View.VISIBLE
+                in 0..364 -> ageInfant.visibility = View.VISIBLE
+                in 365..3652 -> ageChild.visibility = View.VISIBLE
+                in 3653..7304 -> ageTeenager.visibility = View.VISIBLE
+                in 7305..10957 -> ageYoungAdult.visibility = View.VISIBLE
+                in 10958..14609 -> ageAdult.visibility = View.VISIBLE
+                in 14610..18262 -> ageMiddleAge.visibility = View.VISIBLE
+                in 18263..21914 -> ageUpperAge.visibility = View.VISIBLE
+                in 21915..25567 -> ageRetire.visibility = View.VISIBLE
+                in 25568..29219 -> ageWisdom.visibility = View.VISIBLE
+                in 29220..32872 -> ageSenior.visibility = View.VISIBLE
+                in 32873..36524 -> ageElder.visibility = View.VISIBLE
+                else -> ageCentury.visibility = View.VISIBLE
             }
         }
 
@@ -127,17 +129,19 @@ class MainActivity : AppCompatActivity() {
             resultTextViewYears.text = dayCountStyledFinal
 
             resultTextViewMessage.visibility = View.GONE
-            age0.visibility = View.GONE
-            age10.visibility = View.GONE
-            age20.visibility = View.GONE
-            age30.visibility = View.GONE
-            age40.visibility = View.GONE
-            age50.visibility = View.GONE
-            age60.visibility = View.GONE
-            age70.visibility = View.GONE
-            age80.visibility = View.GONE
-            age90.visibility = View.GONE
-            age100.visibility = View.GONE
+            ageInfant.visibility = View.GONE
+            ageChild.visibility = View.GONE
+            ageTeenager.visibility = View.GONE
+            ageYoungAdult.visibility = View.GONE
+            ageAdult.visibility = View.GONE
+            ageMiddleAge.visibility = View.GONE
+            ageUpperAge.visibility = View.GONE
+            ageRetire.visibility = View.GONE
+            ageWisdom.visibility = View.GONE
+            ageSenior.visibility = View.GONE
+            ageElder.visibility = View.GONE
+            ageCentury.visibility = View.GONE
+
             val day2 = dayField.text.toString()
             val month2 = monthField.text.toString()
             val dayInt2 = day2.toInt()
@@ -308,17 +312,18 @@ class MainActivity : AppCompatActivity() {
         planetVenus.setOnClickListener(paperCup)
         planetJupiter.setOnClickListener(paperCup)*/
 
-                age0.setOnClickListener(glassBowl)
-                age10.setOnClickListener(glassBowl)
-                age20.setOnClickListener(glassBowl)
-                age30.setOnClickListener(glassBowl)
-                age40.setOnClickListener(glassBowl)
-                age50.setOnClickListener(glassBowl)
-                age60.setOnClickListener(glassBowl)
-                age70.setOnClickListener(glassBowl)
-                age80.setOnClickListener(glassBowl)
-                age90.setOnClickListener(glassBowl)
-                age100.setOnClickListener(glassBowl)
+                ageInfant.setOnClickListener(glassBowl)
+                ageChild.setOnClickListener(glassBowl)
+                ageTeenager.setOnClickListener(glassBowl)
+                ageYoungAdult.setOnClickListener(glassBowl)
+                ageAdult.setOnClickListener(glassBowl)
+                ageMiddleAge.setOnClickListener(glassBowl)
+                ageUpperAge.setOnClickListener(glassBowl)
+                ageRetire.setOnClickListener(glassBowl)
+                ageWisdom.setOnClickListener(glassBowl)
+                ageSenior.setOnClickListener(glassBowl)
+                ageElder.setOnClickListener(glassBowl)
+                ageCentury.setOnClickListener(glassBowl)
 
 
 
@@ -360,17 +365,18 @@ class MainActivity : AppCompatActivity() {
                     planetUranus.visibility = View.GONE
                     planetNeptune.visibility = View.GONE
 
-                    age0.visibility = View.GONE
-                    age10.visibility = View.GONE
-                    age20.visibility = View.GONE
-                    age30.visibility = View.GONE
-                    age40.visibility = View.GONE
-                    age50.visibility = View.GONE
-                    age60.visibility = View.GONE
-                    age70.visibility = View.GONE
-                    age80.visibility = View.GONE
-                    age90.visibility = View.GONE
-                    age100.visibility = View.GONE
+                    ageInfant.visibility = View.GONE
+                    ageChild.visibility = View.GONE
+                    ageTeenager.visibility = View.GONE
+                    ageYoungAdult.visibility = View.GONE
+                    ageAdult.visibility = View.GONE
+                    ageMiddleAge.visibility = View.GONE
+                    ageUpperAge.visibility = View.GONE
+                    ageRetire.visibility = View.GONE
+                    ageWisdom.visibility = View.GONE
+                    ageSenior.visibility = View.GONE
+                    ageElder.visibility = View.GONE
+                    ageCentury.visibility = View.GONE
 
                 }
             }
