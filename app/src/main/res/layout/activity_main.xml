@@ -104,7 +104,8 @@
         android:padding="10dp"
         android:textColor="@color/dark_purple"
         android:textColorHint="@color/black"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:maxLength="2"/>
 
     <EditText
         android:id="@+id/et_day"
@@ -117,7 +118,8 @@
         android:padding="10dp"
         android:textColor="@color/dark_purple"
         android:textColorHint="@color/black"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:maxLength="2"/>
 
     <EditText
         android:id="@+id/et_year"
@@ -126,11 +128,12 @@
         android:layout_marginBottom="9dp"
         android:fontFamily="sans-serif"
         android:hint="@string/enter_year_1900_2025"
-        android:inputType="number"
         android:padding="10dp"
         android:textColor="@color/dark_purple"
         android:textColorHint="@color/black"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:maxLength="19"
+        />
 
     <Button
         android:id="@+id/btn_calculate"

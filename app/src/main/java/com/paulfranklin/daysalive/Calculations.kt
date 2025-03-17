@@ -6,28 +6,52 @@ import java.time.format.DateTimeParseException
 
 class Calculations {
     companion object {
+
         // Method to calculate days alive
         fun birthdayCalc(day: String?, month: String?, year: String?): Any {
+
             // Step 1: Check for missing input
             if (day.isNullOrBlank() || month.isNullOrBlank() || year.isNullOrBlank()) {
                 return "Error: Do not leave fields blank"
             }
 
+
+
             try {
                 // Step 2: Convert inputs to integers
                 val dayInt = day.toInt()
                 val monthInt = month.toInt()
-                val yearInt = year.toInt()
+                val yearLong = year.toLong()
 
                 // Step 3: Validate ranges
-                if (monthInt !in 1..12 || yearInt !in 1900..2025 || dayInt !in 1..31) {
+
+                val todayDate = LocalDate.now()
+
+                val currentYear = todayDate.year.toLong()       // Extracts the current year as an Int
+                //val currentMonth = todayDate.monthValue // Extracts the current month (1-12) as an Int
+                //val currentDay = todayDate.dayOfMonth
+
+                if (monthInt in 1..12 && yearLong < 1900 && dayInt in 1..31) {
+                    return "Error: Birthday cannot be before year 1900"
+                }
+
+                if (monthInt in 1..12 && yearLong in (currentYear + 1)  ..9999 && dayInt in 1..31) {
+                    return "Error: Birthdate cannot be in the future"
+                }
+
+                if (monthInt in 1..12 && yearLong >= 10000 && dayInt in 1..31) {
+                    return "Error: In the year 10,000 AD, birthdays are banned! 💀"
+                }
+
+                if (monthInt !in 1..12 || dayInt !in 1..31) {
                     return "Error: Please enter valid birthday information"
                 }
 
                 // Step 4: Check if the date actually exists
                 return try {
+                    val yearInt = yearLong.toInt()
                     val userBorn = LocalDate.of(yearInt, monthInt, dayInt)
-                    val todayDate = LocalDate.now()
+
 
                     // Step 5: Prevent future dates
                     if (userBorn.isAfter(todayDate)) {

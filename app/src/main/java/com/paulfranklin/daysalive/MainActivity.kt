@@ -236,6 +236,13 @@ class MainActivity : AppCompatActivity() {
                         // Call birthdayCalc and store the result
                         val result = Calculations.birthdayCalc(day, month, year)
 
+                        if (result is String && result.contains("banned")) {
+                            playSound(R.raw.daysalive_sound_doom)
+                            errorTextViewMessage.text = result
+                            errorTextViewMessage.visibility = View.VISIBLE
+                            return@OnClickListener
+                        }
+
                         if (result is String) {
                             // If result is an error message, display it
                             playSound(R.raw.dayalive_sound_wrong)
@@ -248,8 +255,6 @@ class MainActivity : AppCompatActivity() {
                         if (result !is Long) {
                             throw IllegalStateException("Unexpected result type from birthdayCalc()")
                         }
-
-
 
                         val dayCountRaw = result
                         val dayCountStyled = NumberFormat.getNumberInstance(Locale.US).format(dayCountRaw)
